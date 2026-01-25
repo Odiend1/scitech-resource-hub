@@ -39,7 +39,7 @@ html{
 
 #resource-list-container{
     margin-left: auto;
-    width: 80%;
+    width: 85%;
 }
 
 #resource-list{
@@ -92,7 +92,7 @@ html{
     font-size: 0.75em;
 }
 
-#resource-list li .tag.type-tag{
+#resource-list li .tag.category-tag{
     background-color: #ffaefb;
 }
 
@@ -102,5 +102,19 @@ html{
 
 #filter-container{
     float: left;
-    width: 20%;
+    width: 12%;
+    height: 100vh;
+    padding-left: 2%;
+    padding-right: 1%;
+    border-right: 1px solid #ccc;
+}
+
+.filter-group-title{
+    margin-bottom: 0;
+    padding-bottom: 10px;
+}
+
+.filter-options label{
+    display: block;
+    padding-bottom: 5px;
 }
