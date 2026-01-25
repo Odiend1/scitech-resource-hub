@@ -28,7 +28,7 @@ html{
     font-size: 1.25em;
     border-radius: 35px;
     padding: 10px 1% 10px 50px;
-    margin: 0 7%;
+    margin: 0 7% 30px;
     background-image: url('/assets/icons/search-icon.png');
     background-repeat: no-repeat;
     background-size: auto 35%;
@@ -37,8 +37,14 @@ html{
     background-blend-mode: lighten;
 }
 
+#resource-list-container{
+    text-align: center;
+    float: right;
+    width: 80%;
+}
+
 #resource-list{
-    margin: 30px 4%;
+    text-align: left;
 }
 
 #resource-list li{
@@ -89,4 +95,9 @@ html{
 
 #resource-list li .tag.audience-tag{
     background-color: #ffe28c;
+}
+
+#filter-container{
+    float: left;
+    width: 20%;
 }
