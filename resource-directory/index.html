@@ -11,7 +11,33 @@
         <a class="navbar-link" href="/resource-directory/">Resource Directory</a>
         <a class="navbar-link" href="/">Home</a>
     </div>
-
     <h1>Resource Directory</h1>
+
+    <input id="search" type="text" onkeyup="searchBarFilter()" placeholder="Search for resources...">
+
+    <ul id="resource-list">
+        <li>
+            <img src="./resource-images/food-bank.jpg">
+            <a href="./resources/food-bank/">Food Bank</a>
+            <p>This local food bank provides for students in the Rio Grande Valley. bla bla bla bla blabla bla bla blda blab la bla bla</p>
+            <div class="tag-container">
+                <h5 class="tag type-tag">Public Facilities</h5>
+                <h5 class="tag type-tag">Food Assistance</h5>
+                <h5 class="tag audience-tag">Students</h5>
+                <h5 class="tag audience-tag">Parents</h5>
+                <h5 class="tag audience-tag">Faculty</h5>
+            </div>
+        </li>
+        <li>
+            <img src="./resource-images/food-bank.jpg">
+            <a href="./resources/food-bank/">Online Library</a>
+            <p>Access books for free online with your student account. bla bla bla bla blabla bla bla blda blab la bla bla</p>
+            <div class="tag-container">
+                <h5 class="tag type-tag">Online</h5>
+                <h5 class="tag type-tag">Books</h5>
+                <h5 class="tag audience-tag">Students</h5>
+            </div>
+        </li>
+    </ul>
 </body>
 </html>
