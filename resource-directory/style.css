@@ -18,6 +18,23 @@ html{
     float: right;
 }
 
+#resource-directory-title{
+    margin-left: 7%;
+}
+
+#search-bar{
+    width: 80%;
+    height: 30px;
+    font-size: 1.25em;
+    border-radius: 35px;
+    padding: 10px 1%;
+    margin: 0 7%;
+}
+
+#resource-list{
+    margin: 30px 4%;
+}
+
 #resource-list li{
     display: inline-block;
     border: 1px solid #ccc;
