@@ -38,24 +38,27 @@ html{
 }
 
 #resource-list-container{
-    text-align: center;
-    float: right;
+    margin-left: auto;
     width: 80%;
 }
 
 #resource-list{
-    text-align: left;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 282px);
+    gap: 3%;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
 #resource-list li{
-    display: inline-block;
     border: 1px solid #ccc;
-    margin: 15px;
     padding: 15px;
-    width: 250px;
-    height: 350px;
+    width: 282px;
+    height: 375px;
     border-radius: 20px;
-    vertical-align: top;
+    box-sizing: border-box;
 }
 
 #resource-list li img{
