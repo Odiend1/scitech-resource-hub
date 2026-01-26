@@ -17,7 +17,7 @@ if(!resource) window.location.href = "../";
 document.getElementById("resource-title").innerHTML = resource.name;
 document.getElementById("resource-desc").innerHTML = resource.description;
 document.getElementById("resource-img").src = `../../assets/resource-images/${resourceName.toLowerCase().replaceAll(" ", "-")}.jpg`;
-document.title = resource.name + " - Science Academy Resource Hub";
+document.title = resource.name + " | Science Academy Resource Hub";
 
 function tagColorFromString(str){
     let hash = 0;
