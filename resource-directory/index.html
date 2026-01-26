@@ -15,54 +15,12 @@
 
     <input id="search-bar" type="text" onkeyup="searchBarFilter()" placeholder="Search for resources...">
     <hr>
-    <div id="filter-container"></div>
+    <div id="filter-container"> <!-- JS automatically populates filters --> </div>
     <div id="resource-list-container">
-        <ul id="resource-list">
-            <li class="resource-item">
-                <img src="./resource-images/food-bank.jpg">
-                <a href="./resources/food-bank/">Food Bank</a>
-                <p>This local food bank provides for students in the Rio Grande Valley. bla bla bla bla blabla bla bla blda blab la bla bla</p>
-                <div class="tag-container">
-                    <h5 class="tag category-tag">Public Facilities</h5>
-                    <h5 class="tag category-tag">Food Assistance</h5>
-                    <h5 class="tag audience-tag">Students</h5>
-                    <h5 class="tag audience-tag">Parents</h5>
-                    <h5 class="tag audience-tag">Faculty</h5>
-                </div>
-            </li>
-            <li class="resource-item">
-                <img src="./resource-images/food-bank.jpg">
-                <a href="./resources/food-bank/">Online Library</a>
-                <p>Access books for free online with your student account. bla bla bla bla blabla bla bla blda blab la bla bla</p>
-                <div class="tag-container">
-                    <h5 class="tag category-tag">Online</h5>
-                    <h5 class="tag category-tag">Books</h5>
-                    <h5 class="tag audience-tag">Students</h5>
-                </div>
-            </li>
-            <li class="resource-item">
-                <img src="./resource-images/food-bank.jpg">
-                <a href="./resources/food-bank/">Online Library</a>
-                <p>Access books for free online with your student account. bla bla bla bla blabla bla bla blda blab la bla bla</p>
-                <div class="tag-container">
-                    <h5 class="tag category-tag">Online</h5>
-                    <h5 class="tag category-tag">Books</h5>
-                    <h5 class="tag audience-tag">Students</h5>
-                </div>
-            </li>
-            <li class="resource-item">
-                <img src="./resource-images/food-bank.jpg">
-                <a href="./resources/food-bank/">Online Library</a>
-                <p>Access books for free online with your student account. bla bla bla bla blabla bla bla blda blab la bla bla</p>
-                <div class="tag-container">
-                    <h5 class="tag category-tag">Online</h5>
-                    <h5 class="tag category-tag">Books</h5>
-                    <h5 class="tag audience-tag">Students</h5>
-                </div>
-            </li>
-        </ul>
+        <ul id="resource-list"> <!-- JS automatically populates resources --> </ul>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js" type="module"></script>
+    <script src="resources.js" type="module"></script>
 </body>
 </html>

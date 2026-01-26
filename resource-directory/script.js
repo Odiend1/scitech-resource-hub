@@ -1,3 +1,5 @@
+import { resources } from "./resources.js";
+
 let resourceItems = document.getElementsByClassName("resource-item");
 
 function searchBarFilter(){
@@ -28,14 +30,52 @@ function capitalizeTitle(string){
     return splitString.join(" ");
 }
 
+function populateResources(){
+    let resourceList = document.getElementById("resource-list");
+    // resourceList.innerHTML = "";
+
+    for(let i = 0; i < resources.length; i++){
+        let resourceItem = document.createElement("li");
+        resourceItem.className = "resource-item";
+
+        let resourceImage = document.createElement("img");
+        resourceImage.src = `../assets/resource-images/${resources[i].name.toLowerCase().replaceAll(" ", "-")}.jpg`;
+        resourceItem.appendChild(resourceImage);
+
+        let resourceTitle = document.createElement("a");
+        resourceTitle.href = "./resource/?name=" + encodeURIComponent(resources[i].name);
+        resourceTitle.innerHTML = resources[i].name;
+        resourceItem.appendChild(resourceTitle);
+
+        let resourceDesc = document.createElement("p");
+        resourceDesc.innerHTML = resources[i].description;
+        resourceItem.appendChild(resourceDesc);
+
+        let tagContainer = document.createElement("div");
+        tagContainer.className = "tag-container";
+
+        for(const tagGroup in resources[i].tags){
+            for(let j = 0; j < resources[i].tags[tagGroup].length; j++){
+                let tag = document.createElement("h5");
+                tag.className = `tag ${tagGroup}-tag`;
+                tag.innerHTML = resources[i].tags[tagGroup][j];
+                tagContainer.appendChild(tag);
+            }
+        }
+        resourceItem.appendChild(tagContainer);
+
+        resourceList.appendChild(resourceItem);
+    }
+}
+
 function generateFilters(){
     let tags = [];
 
     for(let i = 0; i < resourceItems.length; i++){
-        resourceItem = resourceItems[i];
+        let resourceItem = resourceItems[i];
         let itemTags = resourceItem.getElementsByClassName("tag");
         for(let j = 0; j < itemTags.length; j++){
-            tagGroups = itemTags[j].classList;
+            let tagGroups = itemTags[j].classList;
             for(let k = 0; k < tagGroups.length; k++){
                 if(tagGroups[k].endsWith("-tag")){
                     let tagName = itemTags[j].innerHTML;
@@ -53,7 +93,6 @@ function generateFilters(){
             }
         }
     }
-    alert(JSON.stringify(tags))
 
     let filterContainer = document.getElementById("filter-container");
     for(let i = 0; i < tags.length; i++){
@@ -85,4 +124,5 @@ function generateFilters(){
     }
 }
 
+populateResources();
 generateFilters();
