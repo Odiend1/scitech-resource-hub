@@ -14,7 +14,40 @@
         <a class="navbar-link" href="../">Home</a>
     </div>
     
-    <h1>Submit Resources</h1>
+    <h1 id="submit-title">Submit Resources</h1>
+    <form onsubmit="submitResource(this)" action="javascript:;">
+        <div id="text-input-container">
+            <div id="single-line-input-container" class="input-container">
+                <label for="resource-name">Resource Name<span class="required-mark"> *</span></label><br>
+                <input type="text" id="resource-name" name="resource-name" placeholder="Resouce name..." required>
+                <br><br>
+                <label for="resource-link">Resource Link (URL)</label><br>
+                <input type="url" id="resource-link" name="resource-link" placeholder="Resource link...">
+            </div>
+
+            <div id="desc-input-container" class="input-container">
+            <label for="resource-desc">Resource Description<span class="required-mark"> *</span></label><br>
+            <textarea id="resource-desc" name="resource-desc" rows="5" placeholder="Resource description..." required></textarea><br><br>
+            </div>
+
+            <div id="tag-input-container" class="input-container">
+                <label for="resource-tags">Tags <button id="add-tag" type="button">+</button></label><br>
+                <div class="tag-input-row">
+                    <input type="text" list="tags-datalist" id="resource-tags" class="resource-tags" name="resource-tags[]" placeholder="Tag name...">
+                    <button id="hidden-remove-tag" class="remove-tag" type="button">-</button>
+                </div>
+                <datalist id="tags-datalist"></datalist>
+            </div>
+
+            <div id="contact-input-container" class="input-container">
+                <label for="resource-contact">Contact Information (Email or Phone)</label><br>
+                <input type="text" id="resource-contact" name="resource-contact"><br><br>
+            </div>
+        </div>
+        
+
+        <input type="submit" value="Submit Resource">
+    </form>
 
     <script src="script.js" type="module"></script>
 </body>
