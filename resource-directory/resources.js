@@ -6,7 +6,15 @@ const resources = [
             category: ["Public Facilities", "Food Assistance"],
             audience: ["Students", "Parents", "Faculty"]
         }
+    },
+    {
+        name: "Online Library",
+        description: "An online library for students.",
+        tags: {
+            category: ["Library", "Online"],
+            audience: ["Students"]
+        }
     }
-]
+];
 
 export { resources };

@@ -68,6 +68,52 @@ function populateResources(){
     }
 }
 
+function applyFilters(){
+    let activeFilters = {};
+
+    let filterGroups = document.getElementsByClassName("filter-group");
+    for(let i = 0; i < filterGroups.length; i++){
+        let groupName = filterGroups[i].id.slice(0, -13); // remove "-filter-group"
+        let checkboxes = filterGroups[i].getElementsByTagName("input");
+        for(let j = 0; j < checkboxes.length; j++){
+            if(checkboxes[j].checked){
+                if(!(groupName in activeFilters)){
+                    activeFilters[groupName] = [];
+                }
+                activeFilters[groupName].push(checkboxes[j].value);
+            }
+        }
+    }
+
+    for(let i = 0; i < resourceItems.length; i++){
+        let item = resourceItems[i];
+        let itemTags = item.getElementsByClassName("tag");
+
+        let showItem = true;
+        for(const group in activeFilters){
+            let groupMatch = false;
+            for(let j = 0; j < itemTags.length; j++){
+                let tagGroups = itemTags[j].classList;
+                for(let k = 0; k < tagGroups.length; k++){
+                    if(tagGroups[k] == group + "-tag" && activeFilters[group].includes(itemTags[j].innerHTML)){
+                        groupMatch = true;
+                    }
+                }
+            }
+            if(!groupMatch){
+                showItem = false;
+            }
+        }
+
+        if(showItem){
+            item.style.display = "inline-block";
+        }
+        else{
+            item.style.display = "none";
+        }
+    }
+}
+
 function generateFilters(){
     let tags = [];
 
@@ -118,9 +164,12 @@ function generateFilters(){
         }
 
         let filterOptionLabel = document.createElement("label");
-        filterOptionLabel.innerHTML = `<input type="checkbox" class="${tags[i].group.toLowerCase()}-filter" onchange="applyFilters()" value="${tags[i].name}"> ${tags[i].name}`;
+        filterOptionLabel.innerHTML = `<input type="checkbox" class="${tags[i].group.toLowerCase()}-filter" value="${tags[i].name}"> ${tags[i].name}`;
         filterOptionLabel.innerHTML += ` (${tags[i].count})`;
         filterOptionsDiv.appendChild(filterOptionLabel);
+
+        let filterCheckbox = filterOptionLabel.querySelector("input");
+        filterCheckbox.addEventListener("change", applyFilters);
     }
 }
 
