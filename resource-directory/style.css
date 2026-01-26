@@ -56,7 +56,7 @@ html{
     border: 1px solid #ccc;
     padding: 15px;
     width: 282px;
-    height: 375px;
+    height: 390px;
     border-radius: 20px;
     box-sizing: border-box;
 }
@@ -73,6 +73,10 @@ html{
     color: #007BFF;
     font-weight: bold;
     font-size: 1.75em;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 
 #resource-list li p{
