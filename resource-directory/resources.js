@@ -5,6 +5,12 @@ const resources = [
         tags: {
             category: ["Public Facilities", "Food Assistance"],
             audience: ["Students", "Parents", "Faculty"]
+        },
+        contact: {
+            website: "https://foodbankrgv.com/",
+            phone: "956-682-8101",
+            instagram: "@foodbankrgv",
+            address: "2601 Zinnia Ave, McAllen, Texas 78501"
         }
     },
     {

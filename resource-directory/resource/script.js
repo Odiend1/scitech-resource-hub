@@ -60,3 +60,36 @@ for(const tagGroup in resource.tags){
         tag.style.backgroundColor = tagColorFromString(tagGroup);
     }
 }
+
+function capitalizeTitle(string){
+    const splitString = string.split(" ");
+    for(let i = 0; i < splitString.length; i++){
+        splitString[i] = splitString[i].charAt(0).toUpperCase() + splitString[i].slice(1);
+    }
+    return splitString.join(" ");
+}
+
+for(const contactMethod in resource.contact){
+    let contactText = document.createElement("h4");
+    contactText.innerHTML = `${capitalizeTitle(contactMethod)}: `;
+    if(contactMethod.startsWith("http") || contactMethod.startsWith("www.") || contactMethod == "website"){
+        contactText.innerHTML += `<a href="${resource.contact[contactMethod]}" target="_blank">${resource.contact[contactMethod]}</a>`;
+    }
+    else if(contactMethod == "instagram"){
+        if(resource.contact[contactMethod].includes("@")) contactText.innerHTML += `<a href="https://instagram.com/${resource.contact[contactMethod].replace("@", "")}" target="_blank">${resource.contact[contactMethod]}</a>`;
+        else contactText.innerHTML += `<a href="https://instagram.com/${resource.contact[contactMethod]}" target="_blank">${resource.contact[contactMethod]}</a>`;
+    }
+    else if(contactMethod == "email"){
+        contactText.innerHTML += `<a href="mailto:${resource.contact[contactMethod]}">${resource.contact[contactMethod]}</a>`;
+    }
+    else if(contactMethod == "phone"){
+        contactText.innerHTML += `<a href="tel:${resource.contact[contactMethod]}">${resource.contact[contactMethod]}</a>`;
+    }
+    else if(contactMethod == "address"){
+        contactText.innerHTML += `<a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(resource.contact[contactMethod])}" target="_blank">${resource.contact[contactMethod]}</a>`;
+    }
+    else{
+        contactText.innerHTML += resource.contact[contactMethod];
+    }
+    document.getElementById("contact-container").appendChild(contactText);
+}
