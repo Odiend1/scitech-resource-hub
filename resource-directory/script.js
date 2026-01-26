@@ -3,7 +3,7 @@ import { resources } from "./resources.js";
 let resourceItems = document.getElementsByClassName("resource-item");
 
 function searchBarFilter(){
-    searchQuery = document.getElementById("search-bar").value.toLowerCase().trim();
+    let searchQuery = document.getElementById("search-bar").value.toLowerCase().trim();
 
     for(let i = 0; i < resourceItems.length; i++){
         let item = resourceItems[i];
