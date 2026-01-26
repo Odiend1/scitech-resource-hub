@@ -92,14 +92,6 @@ html{
     font-size: 0.75em;
 }
 
-#resource-list li .tag.category-tag{
-    background-color: #ffaefb;
-}
-
-#resource-list li .tag.audience-tag{
-    background-color: #ffe28c;
-}
-
 #filter-container{
     float: left;
     width: 12%;
