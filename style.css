@@ -18,3 +18,28 @@ html{
     float: right;
 }
 
+#title-div{
+    display: flex;
+    text-align: center;
+    width: 100%;
+}
+
+#heading-div{
+    text-align: left;
+    width: 30%;
+    padding-left: 10%;
+}
+
+#title-image-div{
+    text-align: center;
+    width: 60%;
+}
+
+h1.title{
+    font-size: 4em;
+    margin: 0;
+}
+
+.accented{
+    color: green;
+}
