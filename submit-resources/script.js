@@ -47,6 +47,9 @@ addTagButton.addEventListener('click', function(event){
     document.getElementById("tag-input-container").appendChild(tagInputRow);
 });
 
+let resourceContactTypeElements = document.getElementsByClassName("resource-contact-type")
+let resourceContactElements = document.getElementsByClassName("resource-contact")
+
 function addContactRow(){
     let contactInputRow = document.createElement('div');
     contactInputRow.className = 'contact-input-row';
@@ -68,6 +71,20 @@ function addContactRow(){
     removeContactButton.addEventListener('click', function(){
         contactInputRow.remove();
     });
+
+    resourceContactTypeElements = document.getElementsByClassName("resource-contact-type")
+    resourceContactElements = document.getElementsByClassName("resource-contact")
+    for(let i = 0; i < resourceContactElements.length; i++){
+        resourceContactElements[i].addEventListener("change", function(e){
+            if(resourceContactElements[i].value.trim().length > 0){
+                resourceContactTypeElements[i].required = true;
+            }
+            else{
+                resourceContactTypeElements[i].required = false;
+            }
+        })
+    }
+
     contactInputRow.appendChild(contactTypeInput);
     contactInputRow.appendChild(contactInput);
     contactInputRow.appendChild(removeContactButton);
@@ -140,14 +157,21 @@ resourceForm.addEventListener("submit", function(e){
     resourceForm.reset();
 })
 
-let resourceContactType = document.getElementById("resource-contact-type")
-let resourceContact = document.getElementById("resource-contact")
+for(let i = 0; i < resourceContactElements.length; i++){
+    resourceContactElements[i].addEventListener("change", function(e){
+        if(resourceContactElements[i].value.trim().length > 0){
+            resourceContactTypeElements[i].required = true;
+        }
+        else{
+            resourceContactTypeElements[i].required = false;
+        }
+    })
+}
 
-resourceContact.addEventListener("change", function(e){
-    if(resourceContact.value.trim().length > 0){
-        resourceContactType.required = true;
-    }
-    else{
-        resourceContactType.required = false;
+document.getElementById("clear-resources").addEventListener("click", function(){
+    let confirmation = confirm("Are you sure you want to clear all submitted resources? This action cannot be undone.");
+    if(confirmation){
+        localStorage.removeItem("submittedResources");
+        alert("Submitted resources cleared.");
     }
 })
