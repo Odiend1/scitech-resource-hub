@@ -132,6 +132,12 @@ resourceForm.addEventListener("submit", function(e){
     delete formObject["tags[]"];
     delete formObject["contact-type[]"];
     delete formObject["contact[]"];
+
+    let submittedResources = JSON.parse(localStorage.getItem("submittedResources")) || [];
+    submittedResources.push(formObject);
+    localStorage.setItem("submittedResources", JSON.stringify(submittedResources));
+    alert("Resource submitted successfully!");
+    resourceForm.reset();
 })
 
 let resourceContactType = document.getElementById("resource-contact-type")

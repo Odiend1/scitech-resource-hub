@@ -30,35 +30,72 @@ function capitalizeTitle(string){
     return splitString.join(" ");
 }
 
+function imageExists(url) {
+  return new Promise((resolve) => {
+    const img = new Image();
+
+    img.onload = () => {
+      resolve(true);
+    };
+
+    img.onerror = () => {
+      resolve(false);
+    };
+
+    img.src = url;
+  });
+}
+
 function populateResources(){
     let resourceList = document.getElementById("resource-list");
-    // resourceList.innerHTML = "";
+    
+    let submittedResources = JSON.parse(localStorage.getItem("submittedResources")) || [];
+    let allResources = resources.concat(submittedResources);
 
-    for(let i = 0; i < resources.length; i++){
+    allResources = allResources.sort((a, b) => {
+        let nameA = a.name.toUpperCase();
+        let nameB = b.name.toUpperCase();
+        if (nameA < nameB) {
+            return -1;
+        }
+        if (nameA > nameB) {
+            return 1;
+        }
+        return 0;
+    });
+
+    for(let i = 0; i < allResources.length; i++){
         let resourceItem = document.createElement("li");
         resourceItem.className = "resource-item";
 
         let resourceImage = document.createElement("img");
-        resourceImage.src = `../assets/resource-images/${resources[i].name.toLowerCase().replaceAll(" ", "-")}.jpg`;
+        imageExists(`../assets/resource-images/${allResources[i].name.toLowerCase().replaceAll(" ", "-")}.jpg`).then(function(isValid){
+            if (isValid) {
+                resourceImage.src = `../assets/resource-images/${allResources[i].name.toLowerCase().replaceAll(" ", "-")}.jpg`;
+            } else {
+                resourceImage.src = '../assets/resource-images/default-resource-image.jpg';
+            }
+        });
+        resourceImage.src = `../assets/resource-images/${allResources[i].name.toLowerCase().replaceAll(" ", "-")}.jpg`;
         resourceItem.appendChild(resourceImage);
 
         let resourceTitle = document.createElement("a");
-        resourceTitle.href = "./resource/?name=" + encodeURIComponent(resources[i].name);
-        resourceTitle.innerHTML = resources[i].name;
+        resourceTitle.href = "./resource/?name=" + encodeURIComponent(allResources[i].name);
+        resourceTitle.innerHTML = allResources[i].name;
         resourceItem.appendChild(resourceTitle);
 
         let resourceDesc = document.createElement("p");
-        resourceDesc.innerHTML = resources[i].description;
+        resourceDesc.innerHTML = allResources[i].description;
         resourceItem.appendChild(resourceDesc);
 
         let tagContainer = document.createElement("div");
         tagContainer.className = "tag-container";
 
-        for(const tagGroup in resources[i].tags){
-            for(let j = 0; j < resources[i].tags[tagGroup].length; j++){
+        for(const tagGroup in allResources[i].tags){
+            for(let j = 0; j < allResources[i].tags[tagGroup].length; j++){
                 let tag = document.createElement("h5");
                 tag.className = `tag ${tagGroup}-tag`;
-                tag.innerHTML = resources[i].tags[tagGroup][j];
+                tag.innerHTML = allResources[i].tags[tagGroup][j];
                 tagContainer.appendChild(tag);
                 tag.style.backgroundColor = tagColorFromString(tagGroup);
             }

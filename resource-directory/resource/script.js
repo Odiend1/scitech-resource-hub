@@ -2,22 +2,46 @@ import { resources } from "../resources.js";
 
 var resourceName = decodeURIComponent(window.location.href.split("?name=")[1]);
 
-function getResourceByName(name){
-    for(let i = 0; i < resources.length; i++){
-        if(resources[i].name == name){
-            return resources[i];
+function getResourceByName(name, customResources=null){
+    if(!customResources) customResources = resources;
+    for(let i = 0; i < customResources.length; i++){
+        if(customResources[i].name == name){
+            return customResources[i];
         }
     }
     return null;
 }
 
-var resource = getResourceByName(resourceName);
+var resource = getResourceByName(resourceName) || getResourceByName(resourceName, JSON.parse(localStorage.getItem("submittedResources")) || []);
 if(!resource) window.location.href = "../";
 
 document.getElementById("resource-title").innerHTML = resource.name;
 document.getElementById("resource-desc").innerHTML = resource.description;
-document.getElementById("resource-img").src = `../../assets/resource-images/${resourceName.toLowerCase().replaceAll(" ", "-")}.jpg`;
 document.title = resource.name + " | Science Academy Resource Hub";
+
+function imageExists(url) {
+  return new Promise((resolve) => {
+    const img = new Image();
+
+    img.onload = () => {
+      resolve(true);
+    };
+
+    img.onerror = () => {
+      resolve(false);
+    };
+
+    img.src = url;
+  });
+}
+
+imageExists(`../../assets/resource-images/${resourceName.toLowerCase().replaceAll(" ", "-")}.jpg`).then(function(isValid){
+  if (isValid) {
+    document.getElementById("resource-img").src = `../../assets/resource-images/${resourceName.toLowerCase().replaceAll(" ", "-")}.jpg`;
+  } else {
+    document.getElementById("resource-img").src = '../../assets/resource-images/default-resource-image.jpg';
+  }
+});
 
 function tagColorFromString(str){
     let hash = 0;
