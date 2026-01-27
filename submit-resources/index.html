@@ -15,33 +15,44 @@
     </div>
     
     <h1 id="submit-title">Submit Resources</h1>
-    <form onsubmit="submitResource(this)" action="javascript:;">
+    <form id="resource-form">
         <div id="text-input-container">
             <div id="single-line-input-container" class="input-container">
-                <label for="resource-name">Resource Name<span class="required-mark"> *</span></label><br>
-                <input type="text" id="resource-name" name="resource-name" placeholder="Resouce name..." required>
+                <label for="name">Resource Name<span class="required-mark"> *</span></label><br>
+                <input type="text" id="resource-name" name="name" placeholder="Resouce name..." required>
                 <br><br>
-                <label for="resource-link">Resource Link (URL)</label><br>
-                <input type="url" id="resource-link" name="resource-link" placeholder="Resource link...">
+                <label for="website">Resource Link (URL)</label><br>
+                <input type="url" id="resource-link" name="website" placeholder="Resource link...">
             </div>
 
             <div id="desc-input-container" class="input-container">
-            <label for="resource-desc">Resource Description<span class="required-mark"> *</span></label><br>
-            <textarea id="resource-desc" name="resource-desc" rows="5" placeholder="Resource description..." required></textarea><br><br>
+            <label for="description">Resource Description<span class="required-mark"> *</span></label><br>
+            <textarea id="resource-desc" name="description" rows="5" placeholder="Resource description..." required></textarea><br><br>
             </div>
 
             <div id="tag-input-container" class="input-container">
-                <label for="resource-tags">Tags <button id="add-tag" type="button">+</button></label><br>
+                <label for="tags[]">Tags <button id="add-tag" class="add-row" type="button">+</button></label><br>
                 <div class="tag-input-row">
-                    <input type="text" list="tags-datalist" id="resource-tags" class="resource-tags" name="resource-tags[]" placeholder="Tag name...">
-                    <button id="hidden-remove-tag" class="remove-tag" type="button">-</button>
+                    <input type="text" list="tags-datalist" id="resource-tags" class="resource-tags" name="tags[]" placeholder="Tag name...">
+                    <button class="hidden-remove-row remove-row" type="button">-</button>
                 </div>
                 <datalist id="tags-datalist"></datalist>
             </div>
 
             <div id="contact-input-container" class="input-container">
-                <label for="resource-contact">Contact Information (Email or Phone)</label><br>
-                <input type="text" id="resource-contact" name="resource-contact"><br><br>
+                <label for="contact[]">Contact Information <button id="add-contact" class="add-row" type="button">+</button></label><br>
+                <div class="contact-input-row">
+                    <!-- <input type="text" list="contact-datalist" class="resource-contact-type" name="contact-type[]" placeholder="Method..."> -->
+                    <input class="resource-contact-type" type="text" name="contact-type[]" placeholder="Method..." list="contact-datalist" hidden>
+                    <datalist id="contact-datalist">
+                        <option value="Email" selected>Email</option>
+                        <option value="Phone">Phone</option>
+                        <option value="Address"></option>
+                        <option value="Instagram"></option>
+                    </datalist>
+                    <input class="resource-contact" type="text" name="contact[]" placeholder="Contact..." hidden>
+                    <button class="hidden-remove-row remove-row" type="button" hidden>-</button>
+                </div>
             </div>
         </div>
         

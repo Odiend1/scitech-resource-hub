@@ -23,4 +23,16 @@ const resources = [
     }
 ];
 
-export { resources };
+var masterTagObject = {}
+for(const resource of resources){
+    for(const tagGroup of Object.keys(resource.tags)){
+        if(!masterTagObject[tagGroup]) masterTagObject[tagGroup] = [];
+        for(let i = 0; i < resource.tags[tagGroup].length; i++){
+            if(!masterTagObject[tagGroup].includes(resource.tags[tagGroup][i])){
+                masterTagObject[tagGroup].push(resource.tags[tagGroup][i]);
+            }
+        }
+    }
+}
+
+export { resources, masterTagObject };
