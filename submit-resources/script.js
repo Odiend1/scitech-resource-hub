@@ -105,12 +105,33 @@ resourceForm.addEventListener("submit", function(e){
         if(tagPushed) tagPushed = false;
         else{
             if(!tagsObject["other"]) tagsObject["other"] = [];
-            tagsObject["other"].push(tagsArr[i])
+            tagsObject["other"].push(tagsArr[i].trim())
         }
     }
-    formObject["tags[]"] = tagsObject;
-    
-    alert(JSON.stringify(formObject));
+    formObject["tags"] = tagsObject;
+    if(Object.keys(formObject["tags"]).length == 0){
+        delete formObject["tags"];
+    }
+
+    let contactTypesArr = formData.getAll("contact-type[]");
+    let contactsArr = formData.getAll("contact[]");
+    formObject["contact"] = {};
+    for(let i = 0; i < contactTypesArr.length; i++){
+        if(contactTypesArr[i].trim() == "" || contactsArr[i].trim() == "") continue;
+        formObject["contact"][contactTypesArr[i].toLowerCase().trim()] = contactsArr[i].trim();
+    }
+
+    if(formObject.website && formObject.website.trim().length > 0){
+        formObject["contact"]["website"] = formObject.website.trim();
+    }
+    delete formObject.website;
+
+    if(Object.keys(formObject["contact"]).length == 0){
+        delete formObject["contact"];
+    }
+    delete formObject["tags[]"];
+    delete formObject["contact-type[]"];
+    delete formObject["contact[]"];
 })
 
 let resourceContactType = document.getElementById("resource-contact-type")

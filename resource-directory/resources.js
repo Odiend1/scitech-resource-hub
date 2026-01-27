@@ -1,7 +1,7 @@
 const resources = [
     {
         name: "Food Bank of the Rio Grande Valley",
-        description: "This local food bank provides for students in the Rio Grande Valley. bla bla bla bla bla bla bl abl abl abla bl abl abl bla",
+        description: "This local food bank provides for students in the Rio Grande Valley.",
         tags: {
             category: ["Public Facilities", "Food Assistance"],
             audience: ["Students", "Parents", "Faculty"]
