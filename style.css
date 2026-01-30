@@ -1,19 +1,31 @@
 :root {
     --background-color: rgb(212, 255, 212);
-    --text-color: rgb(33, 33, 33);
+    --text-color: rgb(255, 255, 255);
     --accent-color: rgb(32, 185, 32);
+    --accent-color-translucent: rgba(32, 185, 32, 0.25);
     --background: linear-gradient(45deg, var(--background-color), white);
 }
 
-html{
+html, body{
     margin: 0;
     padding: 0;
-    padding-top: 5vh;
 }
 
 body{
-    margin: 0;
-    padding: 0;
+    background: radial-gradient(ellipse, var(--accent-color-translucent), 30%, white);
+}
+
+body::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(./assets/photos/science-academy.jpg);
+    background-size: cover;
+    filter: brightness(30%);
+    z-index: -1;
 }
 
 #navbar{
@@ -21,111 +33,87 @@ body{
     position: fixed;
     top: 0;
     left: 0;
-    border-bottom: 2px solid #000;
-    background-color: #f8f8f8;
 }
 
 #navbar a{
     text-decoration: none;
-    color: #333;
+    color: var(--text-color);
     padding: 15px 20px;
     float: right;
+    font-family: "Varela Round", sans-serif;
+}
+
+#home-div{
+    text-align: center;
 }
 
 #title-div{
-    display: flex;
     text-align: center;
-    width: 100%;
-    height: 80vh;
-    padding-bottom: 18vh;
+    display: grid;
     align-items: center;
-    background: var(--background);
-}
-
-@media screen and (max-width: 670px){
-    #title-div{
-        flex-direction: column;
-    }
-    #heading-div{
-        /* order: 2; */
-        width: 90%;
-    }
-    #title-image-div{
-        /* order: 1; */
-        width: 100%;
-    }
-    #heading-div h3.title{
-        margin-top: 10%;
-    }
-}
-
-@media screen and (min-width: 670px){
-    #title-div{
-        flex-direction: row;
-    }
-    #heading-div{
-        /* order: 2; */
-        width: 50%;
-    }
-    #title-image-div{
-        /* order: 1; */
-        width: 40%;
-    }
-}
-
-#heading-div{
-    text-align: left;
-    max-width: 570px;
-    padding-left: 10%;
-}
-
-#title-image-div{
-    text-align: center;
-    flex-grow: 1;
-}
-
-#title-image-div img{
-    width: 80%;
-    height: 50%;
-    max-height: 50vw;
-    object-fit: cover;
-    margin-top: 10%;
-    border: 4px solid #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-h1.title{
-    font-size: 4em;
-    margin: 0;
+    padding-top: 15vh;
 }
 
 .title{
+    font-size: 5em;
+    line-height: 100px;
+    font-family: "Space Grotesk", sans-serif;
+    margin-bottom: 0;
     color: var(--text-color);
-    font-family: "Roboto", sans-serif;
 }
 
-.accented{
+.accent{
     color: var(--accent-color);
 }
 
-h1.accented{
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+#subtitle{
+    font-size: 1.2em;
+    font-family: "Roboto", sans-serif;
+    margin: 30px auto 40px;
+    max-width: 800px;
+    color: var(--text-color);
 }
 
-#foreground{
-    pointer-events: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 999;
+button{
+    width: 175px;
+    height: 50px;
+    border-radius: 25px;
+    display: inline-block;
+    font-size: 1em;
+    font-family: "Varela Round", sans-serif;
+    cursor: pointer;
 }
 
-/* .accent-gradient{
-    width: 25%;
-    height: 25%;
-    background: radial-gradient(circle, rgb(34, 255, 0), 1%, rgb(255, 255, 255, 0), 50%, rgb(255, 255, 255, 0));
-    position: absolute;
-} */
+.button-main1{
+    background-color: var(--accent-color);
+    border: none;
+    color: white;
+    
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.7), 0 0 20px rgba(0, 255, 0, 0.5), 0 0 40px rgba(0, 255, 0, 0.2);
+    
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.7), 0 0 20px rgba(0, 255, 0, 0.5), 0 0 40px  rgba(0, 255, 0, 0.2);
+  }
+  to {
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.7), 0 0 40px rgba(0, 255, 0, 0.5), 0 0 60px  rgba(0, 255, 0, 0.2);
+  }
+}
+
+.button-main1:hover, .button-main2:hover{
+    background-color: rgb(219, 255, 204);
+    color: var(--accent-color);
+    box-shadow: 0 0 20px rgba(0, 255, 0, 1), 0 0 40px rgba(0, 255, 0, 0.8), 0 0 60px rgba(0, 255, 0, 0.4);
+}
+
+.button-main2{
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+    box-shadow: 0 0 20px rgba(102, 102, 102, 0.7);
+}
