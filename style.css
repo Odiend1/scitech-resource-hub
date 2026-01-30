@@ -3,6 +3,9 @@
     --text-color: rgb(255, 255, 255);
     --accent-color: rgb(32, 185, 32);
     --accent-color-translucent: rgba(32, 185, 32, 0.25);
+    --glow-color: rgb(0, 255, 0);
+    --highlight-color: rgb(219, 255, 204);
+    --frosted-glass-color: rgba(255, 255, 255, 0.15);
     --background: linear-gradient(45deg, var(--background-color), white);
 }
 
@@ -87,30 +90,30 @@ button{
 .button-main1{
     background-color: var(--accent-color);
     border: none;
-    color: white;
+    color: var(--text-color);
     
-    box-shadow: 0 0 10px rgba(0, 255, 0, 0.7), 0 0 20px rgba(0, 255, 0, 0.5), 0 0 40px rgba(0, 255, 0, 0.2);
+    box-shadow: 0 0 10px color-mix(in srgb, var(--glow-color) 70%, transparent), 0 0 20px color-mix(in srgb, var(--glow-color) 50%, transparent), 0 0 40px color-mix(in srgb, var(--glow-color) 20%, transparent);
     
     animation: glow 1.5s infinite alternate;
 }
 
 @keyframes glow {
   from {
-    box-shadow: 0 0 10px rgba(0, 255, 0, 0.7), 0 0 20px rgba(0, 255, 0, 0.5), 0 0 40px  rgba(0, 255, 0, 0.2);
+    box-shadow: 0 0 10px color-mix(in srgb, var(--glow-color) 70%, transparent), 0 0 20px color-mix(in srgb, var(--glow-color) 50%, transparent), 0 0 40px color-mix(in srgb, var(--glow-color) 20%, transparent);
   }
   to {
-    box-shadow: 0 0 20px rgba(0, 255, 0, 0.7), 0 0 40px rgba(0, 255, 0, 0.5), 0 0 60px  rgba(0, 255, 0, 0.2);
+    box-shadow: 0 0 20px color-mix(in srgb, var(--glow-color) 70%, transparent), 0 0 40px color-mix(in srgb, var(--glow-color) 50%, transparent), 0 0 60px color-mix(in srgb, var(--glow-color) 20%, transparent);
   }
 }
 
 .button-main1:hover, .button-main2:hover{
-    background-color: rgb(219, 255, 204);
+    background-color: var(--highlight-color);
     color: var(--accent-color);
-    box-shadow: 0 0 20px rgba(0, 255, 0, 1), 0 0 40px rgba(0, 255, 0, 0.8), 0 0 60px rgba(0, 255, 0, 0.4);
+    box-shadow: 0 0 20px color-mix(in srgb, var(--glow-color) 100%, transparent), 0 0 40px color-mix(in srgb, var(--glow-color) 80%, transparent), 0 0 60px color-mix(in srgb, var(--glow-color) 40%, transparent);
 }
 
 .button-main2{
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: var(--frosted-glass-color);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 2px solid var(--accent-color);
