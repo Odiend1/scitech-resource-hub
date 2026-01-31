@@ -247,3 +247,20 @@ function generateFilters(){
 
 populateResources();
 generateFilters();
+
+if(window.location.href.split("?filters=").length > 0){
+    let urlFilters = decodeURIComponent(window.location.href.split("?filters=")[1]).split("&");
+    if(urlFilters){
+        for(let i = 0; i < urlFilters.length; i++){
+            let filterName = capitalizeTitle(urlFilters[i].replaceAll("-", " "));
+            let categoryFilterBoxes = document.getElementsByClassName("category-filter");
+            for(let j = 0; j < categoryFilterBoxes.length; j++){
+                if(categoryFilterBoxes[j].value === filterName){
+                    categoryFilterBoxes[j].checked = true;
+                }
+            }
+        }
+    }
+}
+
+applyFilters();
