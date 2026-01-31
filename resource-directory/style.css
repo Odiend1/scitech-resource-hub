@@ -32,7 +32,7 @@ h4, h5, h6, p, label, a{
     top: 0;
     left: 0;
     background-color: var(--background-color);
-    border-bottom: 4px solid var(--accent-color);
+    border-bottom: 0px solid var(--accent-color);
 }
 
 #navbar a{
