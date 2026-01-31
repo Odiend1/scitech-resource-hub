@@ -39,7 +39,7 @@ imageExists(`../../assets/resource-images/${resourceName.toLowerCase().replaceAl
   if (isValid) {
     document.getElementById("resource-img").src = `../../assets/resource-images/${resourceName.toLowerCase().replaceAll(" ", "-")}.jpg`;
   } else {
-    document.getElementById("resource-img").src = '../../assets/resource-images/default-resource-image.jpg';
+    document.getElementById("resource-img").src = '../../assets/resource-images/default-resource-image.webp';
   }
 });
 

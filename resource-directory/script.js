@@ -76,7 +76,7 @@ function populateResources(){
             if (isValid) {
                 resourceImage.src = `../assets/resource-images/${allResources[i].name.toLowerCase().replaceAll(" ", "-")}.jpg`;
             } else {
-                resourceImage.src = '../assets/resource-images/default-resource-image.jpg';
+                resourceImage.src = '../assets/resource-images/default-resource-image.webp';
             }
         });
         resourceImage.src = `../assets/resource-images/${allResources[i].name.toLowerCase().replaceAll(" ", "-")}.jpg`;
