@@ -13,9 +13,11 @@
         <a class="navbar-link" href="../#about">About</a>
         <a class="navbar-link" href="../">Home</a>
     </div>
-    <h1 id="resource-directory-title">Resource Directory</h1>
+    <div id="top-div">
+        <h1 id="resource-directory-title">Resource Directory</h1>
+        <input id="search-bar" type="text" onkeyup="searchBarFilter()" placeholder="Search for resources...">
+    </div>
 
-    <input id="search-bar" type="text" onkeyup="searchBarFilter()" placeholder="Search for resources...">
     <hr>
     <div id="filter-container"> <!-- JS automatically populates filters --> </div>
     <div id="resource-list-container">
