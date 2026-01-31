@@ -134,6 +134,7 @@ h4, h5, h6, p, label, a{
     -webkit-box-orient: vertical;
     overflow: hidden;
     font-size: 1em;
+    margin-bottom: 6px;
 }
 
 #resource-list li .tag{
