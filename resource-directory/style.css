@@ -1,6 +1,6 @@
 :root {
     --background-color: rgb(255, 255, 255);
-    --backgound-color2: #d8f3dc;
+    --backgound-color2: #95d5b2;
     --title-color: rgb(255, 255, 255);
     --text-color: rgb(0, 0, 0);
     --accent-color: rgb(32, 185, 32);
@@ -32,7 +32,7 @@ h4, h5, h6, p, label, a{
     top: 0;
     left: 0;
     background-color: var(--background-color);
-    border-bottom: 4px solid var(--accent-color);
+    border-bottom: 0px solid var(--accent-color);
 }
 
 #navbar a{
@@ -57,7 +57,7 @@ h4, h5, h6, p, label, a{
 #search-bar{
     width: 80%;
     height: 30px;
-    font-size: 1.25em;
+    font-size: 1.18em;
     border-radius: 35px;
     padding: 10px 1% 10px 50px;
     margin: 0 7% 30px;
@@ -118,7 +118,7 @@ h4, h5, h6, p, label, a{
 
 #resource-list li a{
     text-decoration: none;
-    color: #007BFF;
+    color: #059655;
     font-weight: bold;
     font-size: 1.75em;
     display: -webkit-box;
