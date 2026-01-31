@@ -153,7 +153,7 @@ button{
     box-shadow: 0 0 20px rgba(102, 102, 102, 0.7);
 }
 
-#featured-div{
+#featured{
     text-align: center;
     padding: 50px 0;
     background-color: var(--background-color2);
@@ -299,6 +299,72 @@ button{
     margin-bottom: 30px;
 }
 
+footer{
+    background-color: #f7f7f7;
+}
+
+.footer-container{
+    max-width: 1200px;
+    margin: 30px auto 0;
+    padding: 10px 5% 30px;
+}
+
 .footer-content{
     display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+.footer-logo{
+    flex: 1;
+    min-width: 220px;
+}
+
+.footer-logo img{
+    width: 100px;
+}
+
+.footer-links{
+    flex: 1;
+    min-width: 150px;
+}
+
+.footer-disclaimer{
+    flex: 2;
+    min-width: 80px;
+}
+
+.footer-links-list{
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-links-list a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.footer-links-list a:hover {
+    color: var(--accent-color);
+}
+
+.footer-bottom {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+    text-align: center;
+    font-size: 0.9em;
+    color: #555;
+}
+
+@media screen and (max-width: 750px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 40px;
+    }
 }
