@@ -262,6 +262,7 @@ button{
     border: 1px solid #ccc;
     background-color: #fefffe;
     padding: 25px 0 0;
+    cursor: pointer;
 }
 
 .explore-category img{
