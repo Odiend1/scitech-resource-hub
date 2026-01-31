@@ -1,6 +1,7 @@
 :root {
-    --background-color: rgb(212, 255, 212);
-    --text-color: rgb(255, 255, 255);
+    --background-color: rgb(255, 255, 255);
+    --title-color: rgb(255, 255, 255);
+    --text-color: rgb(0, 0, 0);
     --accent-color: rgb(32, 185, 32);
     --accent-color-translucent: rgba(32, 185, 32, 0.25);
     --glow-color: rgb(0, 255, 0);
@@ -13,22 +14,9 @@ html, body{
     margin: 0;
     padding: 0;
 }
-
+    
 body{
     background: radial-gradient(ellipse, var(--accent-color-translucent), 30%, white);
-}
-
-body::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url(./assets/photos/science-academy.jpg);
-    background-size: cover;
-    filter: brightness(30%);
-    z-index: -1;
 }
 
 #navbar{
@@ -36,6 +24,8 @@ body::before{
     position: fixed;
     top: 0;
     left: 0;
+    background-color: var(--background-color);
+    border-bottom: 8px solid var(--accent-color);
 }
 
 #navbar a{
@@ -48,6 +38,21 @@ body::before{
 
 #home-div{
     text-align: center;
+    height: 100vh;
+}
+
+
+#home-div::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(./assets/photos/science-academy.jpg);
+    background-size: cover;
+    filter: brightness(30%);
+    z-index: -1;
 }
 
 #title-div{
@@ -62,7 +67,7 @@ body::before{
     line-height: 100px;
     font-family: "Space Grotesk", sans-serif;
     margin-bottom: 0;
-    color: var(--text-color);
+    color: var(--title-color);
 }
 
 .accent{
@@ -74,7 +79,7 @@ body::before{
     font-family: "Roboto", sans-serif;
     margin: 30px auto 40px;
     max-width: 800px;
-    color: var(--text-color);
+    color: var(--title-color);
 }
 
 button{
@@ -90,7 +95,7 @@ button{
 .button-main1{
     background-color: var(--accent-color);
     border: none;
-    color: var(--text-color);
+    color: var(--title-color);
     
     box-shadow: 0 0 10px color-mix(in srgb, var(--glow-color) 70%, transparent), 0 0 20px color-mix(in srgb, var(--glow-color) 50%, transparent), 0 0 40px color-mix(in srgb, var(--glow-color) 20%, transparent);
     
