@@ -183,6 +183,11 @@ button{
     box-sizing: border-box;
     cursor: pointer;
     background-color: var(--background-color);
+    transition: transform 0.3s ease-out;
+}
+
+#resource-list li:hover{
+    transform: translateY(-10px);
 }
 
 #resource-list li img{
@@ -263,6 +268,12 @@ button{
     background-color: #fefffe;
     padding: 25px 0 0;
     cursor: pointer;
+    transition: transform 0.3s ease-out;
+}
+
+.explore-category:hover{
+    color: var(--accent-color);
+    transform: translateY(-10px);
 }
 
 .explore-category img{

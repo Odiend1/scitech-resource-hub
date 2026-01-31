@@ -1,5 +1,28 @@
+:root {
+    --background-color: rgb(255, 255, 255);
+    --backgound-color2: #95d5b2;
+    --title-color: rgb(255, 255, 255);
+    --text-color: rgb(0, 0, 0);
+    --accent-color: rgb(32, 185, 32);
+    --accent-color-translucent: rgba(32, 185, 32, 0.25);
+    --glow-color: rgb(0, 255, 0);
+    --highlight-color: rgb(219, 255, 204);
+    --frosted-glass-color: rgba(255, 255, 255, 0.15);
+    --background: linear-gradient(45deg, var(--background-color), white);
+    --title-font: "Space Grotesk", sans-serif;
+    --text-font: "Varela Round", sans-serif;
+}
+
 html{
-    padding-top: 50px;
+    padding-top: 75px;
+}
+
+h1, h2, h3{
+    font-family: var(--title-font);
+}
+
+h4, h5, h5, p, a{
+    font-family: var(--text-font);
 }
 
 #navbar{
@@ -7,16 +30,19 @@ html{
     position: fixed;
     top: 0;
     left: 0;
-    border-bottom: 2px solid #000;
-    background-color: #f8f8f8;
+    background-color: var(--background-color);
+    border-bottom: 8px solid var(--accent-color);
+    z-index: 2;
 }
 
 #navbar a{
     text-decoration: none;
-    color: #333;
+    color: var(--text-color);
     padding: 15px 20px;
     float: right;
+    font-family: "Varela Round", sans-serif;
 }
+
 
 .tag{
     display: inline-block;
@@ -44,6 +70,6 @@ html{
 
 #resource-text{
     text-align: left;
-    padding: 5%;
+    padding: 5% 10% 5% 5%;
     max-width: 600px;
 }
