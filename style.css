@@ -298,3 +298,7 @@ button{
     color: var(--title-color);
     margin-bottom: 30px;
 }
+
+.footer-content{
+    display: flex;
+}
