@@ -11,7 +11,8 @@ const resources = [
             phone: "956-682-8101",
             instagram: "@foodbankrgv",
             address: "2601 Zinnia Ave, McAllen, Texas 78501"
-        }
+        },
+        featured: true
     },
     {
         name: "Online Library",
@@ -19,7 +20,8 @@ const resources = [
         tags: {
             category: ["Library", "Online"],
             audience: ["Students"]
-        }
+        },
+        featured: true
     }
 ];
 
