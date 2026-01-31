@@ -1,13 +1,14 @@
 :root {
     --background-color: rgb(255, 255, 255);
     --background-color2: rgb(237, 255, 231);
+    --background-color3: rgb(28, 207, 111);
     --title-color: rgb(255, 255, 255);
     --text-color: rgb(0, 0, 0);
     --accent-color: #06a556;
     --accent-color-translucent: #20b92040;
     --glow-color: #20e086c7;
     --highlight-color: #cfe4da;
-    --frosted-glass-color: rgba(255, 255, 255, 0.338);
+    --frosted-glass-color: rgba(255, 255, 255, 1);
     --background: linear-gradient(45deg, var(--background-color), white);
     --title-font: "Space Grotesk", sans-serif;
     --text-font: "Varela Round", sans-serif;
@@ -278,4 +279,22 @@ button{
 
 .explore-category img{
     width: 100px;
+}
+
+#submit-div{
+    width: 98%;
+    margin: 0 1%;
+    text-align: center;
+    padding: 75px 0;
+    background-color: var(--background-color3);
+    border-radius: 50px;
+}
+
+#submit-div h1{
+    color: var(--title-color);
+}
+
+#submit-div p{
+    color: var(--title-color);
+    margin-bottom: 30px;
 }
