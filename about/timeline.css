@@ -16,9 +16,17 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: #474e5d;
-  font-family: Helvetica, sans-serif;
+#timeline-container{
+    width: 100%;
+    background-color: #474e5d;
+    padding: 50px 0 0;
+}
+
+#timeline-container h1{
+    text-align: center;
+    color: var(--title-color);
+    font-size: 3em;
+    margin: 0;
 }
 
 .timeline {

@@ -1,4 +1,115 @@
+:root {
+    --background-color: rgb(255, 255, 255);
+    --title-color: rgb(255, 255, 255);
+    --text-color: rgb(0, 0, 0);
+    --accent-color: #06a556;
+    --accent-color-translucent: #20b92040;
+    --glow-color: #20e086c7;
+    --highlight-color: #cfe4da;
+    --frosted-glass-color: rgba(255, 255, 255, 0.15);
+    --background: linear-gradient(45deg, var(--background-color), white);
+    --title-font: "Space Grotesk", sans-serif;
+    --text-font: "Varela Round", sans-serif;
+}
+
 html, body{
     margin: 0;
     padding: 0;
 }
+
+h1, h2, h3{
+    font-family: var(--title-font);
+}
+
+h4, h5, h6, p, label, a{
+    font-family: var(--text-font);
+}
+
+.accent{
+    color: var(--accent-color);
+}
+
+#navbar{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--background-color);
+    border-bottom: 8px solid var(--accent-color);
+    z-index: 2;
+}
+
+#navbar a{
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 15px 20px;
+    float: right;
+    font-family: "Varela Round", sans-serif;
+}
+
+#about-container{
+    background-color: white;
+    padding: 100px 20px;
+}
+
+#about-text{
+    order: 1;
+}
+
+#about-container img{
+    order: 2;
+    padding: 50px 50px 0;
+}
+
+@media screen and (max-width: 7000px) {
+    #about-container{
+        display: grid;
+    }
+
+    #about-container img{
+        max-height: none;
+        width: 100%;
+    }
+}
+@media screen and (min-width: 700px) and (max-width: 1000px){
+    #about-container{
+        display: grid;
+        padding-bottom: 20px;
+    }
+
+    #about-container img{
+        max-height: 10vh;
+        width: auto;
+        padding: 0;
+        display: inline-block;
+        margin: 0 auto;
+    }
+
+    #about-container img::before{
+        content: "";
+        width: 90vh;
+        height: 1px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: var(--accent-color);
+        margin: 0 auto;
+    }
+}
+@media screen and (min-width: 1000px) {
+    #about-container{
+        display: flex;
+    }
+    #about-container img{
+        max-height: 70vh;
+    }
+}
+@media screen and (min-width: 1200px) {
+    #about-container{
+        display: flex;
+    }
+    #about-container img{
+        max-height: 45vh;
+    }
+}
+

@@ -1,12 +1,13 @@
 :root {
     --background-color: rgb(255, 255, 255);
+    --background-color2: rgb(237, 255, 231);
     --title-color: rgb(255, 255, 255);
     --text-color: rgb(0, 0, 0);
     --accent-color: #06a556;
     --accent-color-translucent: #20b92040;
     --glow-color: #20e086c7;
     --highlight-color: #cfe4da;
-    --frosted-glass-color: rgba(255, 255, 255, 0.15);
+    --frosted-glass-color: rgba(255, 255, 255, 0.338);
     --background: linear-gradient(45deg, var(--background-color), white);
     --title-font: "Space Grotesk", sans-serif;
     --text-font: "Varela Round", sans-serif;
@@ -157,7 +158,8 @@ button{
 
 #featured-div{
     text-align: center;
-    padding-top: 50px;
+    padding: 50px 0;
+    background-color: var(--background-color2);
 }
 
 #resource-list-container{
@@ -184,6 +186,7 @@ button{
     border-radius: 20px;
     box-sizing: border-box;
     cursor: pointer;
+    background-color: var(--background-color);
 }
 
 #resource-list li img{
@@ -222,4 +225,49 @@ button{
     margin: 3px;
     border-radius: 10px;
     font-size: 0.75em;
+}
+
+#explore-div{
+    background-color: var(--background-color);
+    text-align: center;
+    padding: auto 0;
+    padding: 50px 5% 100px;
+    width: 90%;
+}
+
+#explore-div h1{
+    margin-bottom: 0;
+}
+
+#explore-div p{
+    margin-bottom: 30px;
+}
+
+#explore-category-div{
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(4, 250px);
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 915px){
+    #explore-category-div{
+        grid-template-columns: repeat(2, 250px);
+        gap: 25px;
+        column-gap: 0px;
+    }
+}
+
+.explore-category{
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    background-color: #fefffe;
+    padding: 25px 0 0;
+}
+
+.explore-category img{
+    width: 100px;
 }
