@@ -105,6 +105,7 @@ h4, h5, h6, p, label, a{
     height: 390px;
     border-radius: 20px;
     box-sizing: border-box;
+    cursor: pointer;
 }
 
 #resource-list li img{

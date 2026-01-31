@@ -67,6 +67,9 @@ function populateResources(){
     for(let i = 0; i < allResources.length; i++){
         let resourceItem = document.createElement("li");
         resourceItem.className = "resource-item";
+        resourceItem.addEventListener("click", function(){
+            window.location.href = "./resource/?name=" + encodeURIComponent(allResources[i].name);
+        })
 
         let resourceImage = document.createElement("img");
         imageExists(`../assets/resource-images/${allResources[i].name.toLowerCase().replaceAll(" ", "-")}.jpg`).then(function(isValid){
