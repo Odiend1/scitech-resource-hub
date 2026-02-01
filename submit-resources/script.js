@@ -166,6 +166,8 @@ resourceForm.addEventListener("submit", function(e){
     delete formObject["contact-type[]"];
     delete formObject["contact[]"];
 
+    formObject.name = "<span class='pending'>[Pending]</span> " + formObject.name;
+
     let submittedResources = JSON.parse(localStorage.getItem("submittedResources")) || [];
     submittedResources.push(formObject);
     localStorage.setItem("submittedResources", JSON.stringify(submittedResources));

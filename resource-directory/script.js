@@ -50,8 +50,8 @@ function populateResources(){
     let resourceList = document.getElementById("resource-list");
     
     let submittedResources = JSON.parse(localStorage.getItem("submittedResources")) || [];
-    let allResources = resources.concat(submittedResources);
 
+    let allResources = resources;
     allResources = allResources.sort((a, b) => {
         let nameA = a.name.toUpperCase();
         let nameB = b.name.toUpperCase();
@@ -64,12 +64,17 @@ function populateResources(){
         return 0;
     });
 
+    allResources = submittedResources.concat(allResources);
+
     for(let i = 0; i < allResources.length; i++){
         let resourceItem = document.createElement("li");
         resourceItem.className = "resource-item";
         resourceItem.addEventListener("click", function(){
             window.location.href = "./resource/?name=" + encodeURIComponent(allResources[i].name);
         })
+        if(allResources[i].name.includes("Pending")){
+            resourceItem.style.border = "1px dashed #ccc";
+        }
 
         let resourceImage = document.createElement("img");
         imageExists(`../assets/resource-images/${allResources[i].name.toLowerCase().replaceAll(" ", "-")}.jpg`).then(function(isValid){
