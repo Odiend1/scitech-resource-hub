@@ -28,6 +28,7 @@ h4, h5, h6, p, label, a{
 }
 
 #navbar{
+    z-index: 3;
     width: 100%;
     position: fixed;
     top: 0;
@@ -209,6 +210,7 @@ button{
     -webkit-box-orient: vertical;
     font-family: var(--title-font);
     line-height: 1.1em;
+    overflow: hidden;
 }
 
 #resource-list li p{

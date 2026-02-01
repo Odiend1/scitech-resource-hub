@@ -27,6 +27,7 @@ h4, h5, h6, p, label, a{
 }
 
 #navbar{
+    z-index: 3;
     width: 100%;
     position: fixed;
     top: 0;
@@ -135,6 +136,7 @@ h4, h5, h6, p, label, a{
     -webkit-line-clamp: 2;
     line-clamp: 2;
     -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 #resource-list li p{

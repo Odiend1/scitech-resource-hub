@@ -30,6 +30,7 @@ h4, h5, h6, p, label, a{
 }
 
 #navbar{
+    z-index: 3;
     width: 100%;
     position: fixed;
     top: 0;

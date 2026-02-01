@@ -167,7 +167,7 @@ function applyFilters(){
             for(let j = 0; j < itemTags.length; j++){
                 let tagGroups = itemTags[j].classList;
                 for(let k = 0; k < tagGroups.length; k++){
-                    if(tagGroups[k] == group + "-tag" && activeFilters[group].includes(itemTags[j].innerHTML)){
+                    if(tagGroups[k] == group + "-tag" && activeFilters[group].includes(itemTags[j].innerHTML.replace("&amp;", "&"))){
                         groupMatch = true;
                     }
                 }
@@ -252,7 +252,7 @@ if(window.location.href.split("?filters=").length > 0){
     let urlFilters = decodeURIComponent(window.location.href.split("?filters=")[1]).split("&");
     if(urlFilters){
         for(let i = 0; i < urlFilters.length; i++){
-            let filterName = capitalizeTitle(urlFilters[i].replaceAll("-", " "));
+            let filterName = capitalizeTitle(urlFilters[i].replaceAll("-", " ").replaceAll("_", " & "));
             let categoryFilterBoxes = document.getElementsByClassName("category-filter");
             for(let j = 0; j < categoryFilterBoxes.length; j++){
                 if(categoryFilterBoxes[j].value === filterName){
