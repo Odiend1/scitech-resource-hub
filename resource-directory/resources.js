@@ -57,7 +57,7 @@ const resources = [
     },
     {
         "name": "Astronomy Club",
-        "description": "Do you want to learn more about the stars, space, and elements of  the universe? Well, the Astronomy Club is perfect for you. Here at the Astronomy club, we have students explore the elements of space and what makes up our universe. We do different activities as well in order to ensure that students are able to understand what makes up our universe. We also host starwatch parties where students can look at the stars while being with friends.",
+        "description": "Do you want to learn more about the stars, space, and the universe? Well, the Astronomy Club is perfect for you. Here at the Astronomy club, we have students explore the elements of space and what makes up our universe. We do different activities as well in order to ensure that students are able to understand what makes up our universe. We also host starwatch parties where students can look at the stars while being with friends.",
         "tags": {
             "category": ["Club Organizations", "STEM", "After School"],
             "audience": ["Students"]

@@ -55,7 +55,7 @@ function populateResources(random=false){
         let resourceItem = document.createElement("li");
         resourceItem.className = "resource-item";
         resourceItem.addEventListener("click", function(){
-            window.location.href = "./resource/?name=" + encodeURIComponent(allResources[i].name);
+            window.location.href = "./resource-directory/resource/?name=" + encodeURIComponent(allResources[i].name);
         })
 
         let resourceImage = document.createElement("img");
@@ -70,7 +70,7 @@ function populateResources(random=false){
         resourceItem.appendChild(resourceImage);
 
         let resourceTitle = document.createElement("a");
-        resourceTitle.href = "./resource/?name=" + encodeURIComponent(allResources[i].name);
+        resourceTitle.href = "./resource-directory/resource/?name=" + encodeURIComponent(allResources[i].name);
         resourceTitle.innerHTML = allResources[i].name;
         resourceItem.appendChild(resourceTitle);
 
