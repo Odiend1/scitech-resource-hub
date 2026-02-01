@@ -1,6 +1,7 @@
 :root {
     --background-color: rgb(255, 255, 255);
-    --backgound-color2: #95d5b2;
+    --background-color2: rgb(237, 255, 231);
+    --background-color3: #95d5b2;
     --title-color: rgb(255, 255, 255);
     --text-color: rgb(0, 0, 0);
     --accent-color: rgb(32, 185, 32);
@@ -36,8 +37,8 @@ body{
     position: fixed;
     top: 0;
     left: 0;
-    border-bottom: 2px solid #000;
-    background-color: #f8f8f8;
+    border-bottom: 4px solid var(--accent-color);
+    background-color: #fefefe;
 }
 
 #navbar a{
@@ -52,6 +53,17 @@ body{
 }
 
 form{
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 50px 10px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    background-color: var(--background-color2);
+}
+
+#form-container{
+    width: 100%;
     text-align: center;
 }
 
@@ -105,10 +117,7 @@ input[type="submit"]{
     margin-top: 2%;
     border-radius: 10px;
     cursor: pointer;
-}
-
-input[type="submit"]:hover{
-    background-color: #ddd;
+    background-color: #fff;
 }
 
 .required-mark{
@@ -145,11 +154,6 @@ input[type="submit"]:hover{
     align-items: center;
 }
 
-.hidden-remove-row{
-    visibility: hidden;
-    margin: none;
-}
-
 .resource-contact{
     width: 44%;
     height: 50px;
@@ -163,19 +167,99 @@ input[type="submit"]:hover{
     flex-grow: 1;
 }
 
-#clear-resources{
+
+button, input[type="submit"]{
+    width: 175px;
+    height: 50px;
+    border-radius: 25px;
+    display: inline-block;
+    font-size: 1em;
+    font-family: "Varela Round", sans-serif;
+    cursor: pointer;
+}
+
+.button-small{
+    background-color: var(--frosted-glass-color);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid black;
+    color: black;
+    box-shadow: 0 0 5px rgba(102, 102, 102, 0.7);
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.button-small:hover{
+    filter: brightness(95%);
+}
+
+.button-small-icon{
+    height: 25px;
+    /* filter: invert(48%) sepia(100%) saturate(5207%) hue-rotate(130deg) brightness(155%) contrast(80%); */
+} 
+
+.button-main1{
+    background-color: var(--accent-color);
     border: none;
+    color: var(--title-color);
+    
+    box-shadow: 0 0 10px color-mix(in srgb, var(--glow-color) 70%, transparent), 0 0 20px color-mix(in srgb, var(--glow-color) 50%, transparent), 0 0 40px color-mix(in srgb, var(--glow-color) 20%, transparent);
+    
+    animation: glow 1.5s infinite alternate;
+}
+
+
+.hidden-remove-row{
+    visibility: hidden;
+    margin: 0;
+    display: none;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px color-mix(in srgb, var(--glow-color) 70%, transparent), 0 0 20px color-mix(in srgb, var(--glow-color) 50%, transparent), 0 0 40px color-mix(in srgb, var(--glow-color) 20%, transparent);
+  }
+  to {
+    box-shadow: 0 0 20px color-mix(in srgb, var(--glow-color) 70%, transparent), 0 0 40px color-mix(in srgb, var(--glow-color) 50%, transparent), 0 0 60px color-mix(in srgb, var(--glow-color) 20%, transparent);
+  }
+}
+
+.button-main1:hover, .button-main2:hover{
+    background-color: var(--highlight-color);
+    color: var(--accent-color);
+    box-shadow: 0 0 20px color-mix(in srgb, var(--glow-color) 100%, transparent), 0 0 40px color-mix(in srgb, var(--glow-color) 80%, transparent), 0 0 60px color-mix(in srgb, var(--glow-color) 40%, transparent);
+}
+
+.button-main2{
+    background-color: var(--frosted-glass-color);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+    box-shadow: 0 0 20px rgba(102, 102, 102, 0.7);
+}
+
+
+#clear-resources{
+    /* border: none;
     background: none;
     text-decoration: underline;
-    color: blue;
+    color: blue; */
     cursor: pointer;
     margin: auto;
+    width: 200px;
+    color: var(--text-color);
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 #withdraw-div{
     width: 100%;
     text-align: center;
-    margin: 100px 0 20px;
+    padding: 50px 0 80px;
+    margin: 50px 0 0;
+    background-color: #ccc;
 }
 
 footer{
@@ -184,7 +268,7 @@ footer{
 
 .footer-container{
     max-width: 1200px;
-    margin: 30px auto 0;
+    margin: 0 auto;
     padding: 10px 5% 30px;
 }
 
