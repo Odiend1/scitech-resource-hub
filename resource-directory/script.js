@@ -11,10 +11,10 @@ function searchBarFilter(){
         let itemDesc = item.querySelector("p").innerHTML.toLowerCase().trim();
 
         if(itemTitle.includes(searchQuery)){
-            item.style.display = "inline-block";
+            item.style.display = "block";
         }
         else if(searchQuery.length > 4 && itemDesc.includes(searchQuery)){
-            item.style.display = "inline-block";
+            item.style.display = "block";
         }
         else{
             item.style.display = "none";
@@ -178,7 +178,7 @@ function applyFilters(){
         }
 
         if(showItem){
-            item.style.display = "inline-block";
+            item.style.display = "block";
         }
         else{
             item.style.display = "none";
