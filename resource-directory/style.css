@@ -170,7 +170,6 @@ h4, h5, h6, p, label, a{
     border-right: 1px solid #ccc;
     flex: 0 0 14%;
     padding: 16px;
-    background-color: #fafafa;
 }
 
 .filter-group-title{
@@ -199,6 +198,7 @@ h4, h5, h6, p, label, a{
         flex-grow: 1;
         min-width: calc(100vw - 32px);
         border-bottom: 1px solid #ccc;
+        background-color: #fafafa;
     }
     #resource-list-container{
         flex-grow: 1;
