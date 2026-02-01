@@ -90,8 +90,8 @@ const resources = [
         }
     },
     {
-        "name": "National Honors Society",
-        "description": "The National Honors Society is a non-profit organization where high performing students are invited to join. In order to join NHS, a student must maintain a high GPA, and must be a good student in the school community as well. NHS activities include volunteering for the community, donating goods, and spreading kindness to others. ",
+        "name": "National Honor Society",
+        "description": "The National Honor Society is a non-profit organization where high performing students are invited to join. In order to join NHS, a student must maintain a high GPA, and must be a good student in the school community as well. NHS activities include volunteering for the community, donating goods, and spreading kindness to others. ",
         "tags": {
             "category": ["Club Organizations", "Volunteering", "After School"],
             "audience": ["Students"]
