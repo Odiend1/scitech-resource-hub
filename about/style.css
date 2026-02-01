@@ -1,7 +1,7 @@
 :root {
     --background-color: rgb(255, 255, 255);
     --title-color: rgb(255, 255, 255);
-    --text-color: rgb(0, 0, 0);
+    --text-color: #000000;
     --accent-color: #06a556;
     --accent-color-translucent: #20b92040;
     --glow-color: #20e086c7;
