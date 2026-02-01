@@ -35,13 +35,32 @@ function imageExists(url) {
   });
 }
 
-imageExists(`../../assets/resource-images/${resourceName.toLowerCase().replaceAll(" ", "-")}.jpg`).then(function(isValid){
-  if (isValid) {
-    document.getElementById("resource-img").src = `../../assets/resource-images/${resourceName.toLowerCase().replaceAll(" ", "-")}.jpg`;
-  } else {
-    document.getElementById("resource-img").src = '../../assets/resource-images/default-resource-image.webp';
-  }
+imageExists(`../../assets/resource-images/${resourceName.replaceAll(" ", "-")}.jpg`).then(function(jpgIsValid){
+    if (jpgIsValid) {
+        document.getElementById("resource-img").src = `../../assets/resource-images/${resourceName.replaceAll(" ", "-")}.jpg`;
+    } else {
+        imageExists(`../../assets/resource-images/${resourceName.replaceAll(" ", "-")}.webp`).then(function(webpIsValid){
+            if (webpIsValid) {
+                document.getElementById("resource-img").src = `../../assets/resource-images/${resourceName.replaceAll(" ", "-")}.webp`;
+            } else {
+                imageExists(`../../assets/resource-images/${resourceName.replaceAll(" ", "-")}.jpeg`).then(function(jpegIsValid){
+                    if (jpegIsValid) {
+                        document.getElementById("resource-img").src = `../../assets/resource-images/${resourceName.replaceAll(" ", "-")}.jpeg`;
+                    } else {
+                        imageExists(`../../assets/resource-images/${resourceName.replaceAll(" ", "-")}.png`).then(function(pngIsValid){
+                            if (pngIsValid) {
+                                document.getElementById("resource-img").src = `../../assets/resource-images/${resourceName.replaceAll(" ", "-")}.png`;
+                            } else {
+                                document.getElementById("resource-img").src = '../../assets/resource-images/default-resource-image.webp';
+                            }
+                        });
+                    }
+                });                    
+            }
+        });            
+    }
 });
+
 
 function tagColorFromString(str){
     let hash = 0;

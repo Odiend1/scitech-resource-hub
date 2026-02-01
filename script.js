@@ -59,11 +59,29 @@ function populateResources(random=false){
         })
 
         let resourceImage = document.createElement("img");
-        imageExists(`./assets/resource-images/${allResources[i].name.toLowerCase().replaceAll(" ", "-")}.jpg`).then(function(isValid){
-            if (isValid) {
+        imageExists(`./assets/resource-images/${allResources[i].name.toLowerCase().replaceAll(" ", "-")}.jpg`).then(function(jpgIsValid){
+            if (jpgIsValid) {
                 resourceImage.src = `./assets/resource-images/${allResources[i].name.toLowerCase().replaceAll(" ", "-")}.jpg`;
             } else {
-                resourceImage.src = './assets/resource-images/default-resource-image.webp';
+                imageExists(`./assets/resource-images/${allResources[i].name.toLowerCase().replaceAll(" ", "-")}.webp`).then(function(webpIsValid){
+                    if (webpIsValid) {
+                        resourceImage.src = `./assets/resource-images/${allResources[i].name.toLowerCase().replaceAll(" ", "-")}.webp`;
+                    } else {
+                        imageExists(`./assets/resource-images/${allResources[i].name.toLowerCase().replaceAll(" ", "-")}.jpeg`).then(function(jpegIsValid){
+                            if (jpegIsValid) {
+                                resourceImage.src = `./assets/resource-images/${allResources[i].name.toLowerCase().replaceAll(" ", "-")}.jpeg`;
+                            } else {
+                                imageExists(`./assets/resource-images/${allResources[i].name.toLowerCase().replaceAll(" ", "-")}.png`).then(function(pngIsValid){
+                                    if (pngIsValid) {
+                                        resourceImage.src = `./assets/resource-images/${allResources[i].name.toLowerCase().replaceAll(" ", "-")}.png`;
+                                    } else {
+                                        resourceImage.src = './assets/resource-images/default-resource-image.webp';
+                                    }
+                                });
+                            }
+                        });                    
+                    }
+                });            
             }
         });
         resourceImage.src = `./assets/resource-images/${allResources[i].name.toLowerCase().replaceAll(" ", "-")}.jpg`;
