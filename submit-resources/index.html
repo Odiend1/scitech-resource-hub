@@ -27,31 +27,31 @@
             <div id="text-input-container">
                 <div id="single-line-input-container" class="input-container">
                     <label for="name">Resource Name<span class="required-mark"> *</span></label><br>
-                    <input type="text" id="resource-name" name="name" placeholder="Resouce name..." required>
+                    <input type="text" id="resource-name" name="name" placeholder="eg.Technology Student Association" required>
                     <br><br>
-                    <label for="website">Resource Link (URL)</label><br>
-                    <input type="text" id="resource-link" name="website" placeholder="Resource link...">
+                    <label for="website">Website(optional)</label><br>
+                    <input type="text" id="resource-link" name="website" placeholder="https://...">
                 </div>
 
                 <div id="desc-input-container" class="input-container">
-                <label for="description">Resource Description<span class="required-mark"> *</span></label><br>
-                <textarea id="resource-desc" name="description" rows="5" placeholder="Resource description..." required></textarea><br><br>
+                <label for="description">Description<span class="required-mark"> *</span></label><br>
+                <textarea id="resource-desc" name="description" rows="5" placeholder="Describe the resource, what it offers, and who it helps..." required></textarea><br><br>
                 </div>
 
                 <div id="tag-input-container" class="input-container">
-                    <label for="tags[]">Tags <button id="add-tag" class="add-row" type="button">+</button></label><br>
+                    <label for="tags[]">Category & Audience <button id="add-tag" class="add-row" type="button">+</button></label><br>
                     <div class="tag-input-row">
-                        <input type="text" list="tags-datalist" id="resource-tags" class="resource-tags" name="tags[]" placeholder="Tag name...">
+                        <input type="text" list="tags-datalist" id="resource-tags" class="resource-tags" name="tags[]" placeholder="Select a category and primary audience">
                         <button class="hidden-remove-row remove-row" type="button">-</button>
                     </div>
                     <datalist id="tags-datalist"></datalist>
                 </div>
 
                 <div id="contact-input-container" class="input-container">
-                    <label for="contact[]">Contact Information <button id="add-contact" class="add-row" type="button">+</button></label><br>
+                    <label for="contact[]">Contact Info<button id="add-contact" class="add-row" type="button">+</button></label><br>
                     <div class="contact-input-row">
                         <!-- <input type="text" list="contact-datalist" class="resource-contact-type" name="contact-type[]" placeholder="Method..."> -->
-                        <select class="resource-contact-type" name="contact-type[]" placeholder="Method..." list="contact-datalist" hidden>
+                        <select class="resource-contact-type" name="contact-type[]" placeholder="Method of contact..." list="contact-datalist" hidden>
                             <option value="Email" selected>Email</option>
                             <option value="Phone">Phone</option>
                             <option value="Address">Address</option>
@@ -63,7 +63,7 @@
                             <option value="Address">Address</option>
                             <option value="Instagram">Instagram</option>
                         </datalist>
-                        <input class="resource-contact" type="text" name="contact[]" placeholder="Contact..." hidden>
+                        <input class="resource-contact" type="text" name="contact[]" placeholder="How to contact..." hidden>
                         <button class="hidden-remove-row remove-row" type="button" hidden>-</button>
                     </div>
                 </div>
@@ -75,8 +75,8 @@
     </div>
 
     <div id="withdraw-div">
-        <h3>Want to withdraw your submissions?</h3>
-        <button id="clear-resources" class="button-small">Clear Submissions</button>
+        <h3>Want to withdraw your submission?</h3>
+        <button id="clear-resources" class="button-small">Clear Submission</button>
     </div>
 
 
