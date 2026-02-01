@@ -1,6 +1,6 @@
 :root {
     --background-color: rgb(255, 255, 255);
-    --background-color2: rgb(237, 255, 231);
+    --background-color2: #d6f5e4;
     --background-color3: #95d5b2;
     --title-color: rgb(255, 255, 255);
     --text-color: rgb(0, 0, 0);
@@ -88,7 +88,7 @@ input[type="text"]:not(.resource-tags):not(.resource-contact):not(.resource-cont
 
 input[type="text"]:not(.resource-tags), input[type="url"], select{
     height: 50px;
-    font-size: 20px;
+    font-size: 15px;
     border-radius: 10px;
     box-sizing: border-box;
     padding-left: 10px;
@@ -97,12 +97,12 @@ input[type="text"]:not(.resource-tags), input[type="url"], select{
 
 #desc-input-container textarea{
     width: 100%;
-    font-size: 20px;
+    font-size: 16px;
     padding: 15px;
     margin-top: 10px;
     resize: none;
     border-radius: 10px;
-    border: 2px solid #000;
+    border: 2px solid #000000;
     border-style: inset;
     box-sizing: border-box;
 }
@@ -117,7 +117,7 @@ input[type="submit"]{
     margin-top: 2%;
     border-radius: 10px;
     cursor: pointer;
-    background-color: #fff;
+    background-color: #4e9c70;
 }
 
 .required-mark{
@@ -127,7 +127,7 @@ input[type="submit"]{
 .resource-tags{
     width: 85%;
     height: 40px;
-    font-size: 18px;
+    font-size: 15px;
     border-radius: 10px;
     box-sizing: border-box;
     padding-left: 10px;
@@ -182,8 +182,8 @@ button, input[type="submit"]{
     background-color: var(--frosted-glass-color);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 1px solid black;
-    color: black;
+    border: 1px solid #005c29;
+    color: #ffffff;
     box-shadow: 0 0 5px rgba(102, 102, 102, 0.7);
     display: flex;
     align-items: center; 
@@ -259,7 +259,7 @@ button, input[type="submit"]{
     text-align: center;
     padding: 50px 0 80px;
     margin: 50px 0 0;
-    background-color: #ccc;
+    background-color: #74a38d;
 }
 
 footer{
