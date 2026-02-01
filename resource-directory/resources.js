@@ -10,6 +10,7 @@ const resources = [
         "contact": {
             "website": "https://www.facebook.com/scienceacademypsto/",
             "email": "scienceacademyptso@gmail.com",
+            "instagram": "@scienceacademyptso",
             "address": "900 Med High Dr, Mercedes, TX 78570"
         }
     },
@@ -24,6 +25,7 @@ const resources = [
         "contact": {
             "website": "https://tsaweb.org/",
             "email": "gavin.harding@stisd.net",
+            "instagram": "@scitech.tsa",
             "address": "900 Med High Dr, Mercedes, TX 78570"
         }
     },
@@ -38,6 +40,7 @@ const resources = [
         "contact": {
             "website": "https://bpa.org/ ",
             "email": "ricardo.rodriguez@stisd.net ",
+            "instagram": "@scitech.bpa",
             "address": "900 Med High Dr, Mercedes, TX 78570"
         }
     },
@@ -52,6 +55,7 @@ const resources = [
         "contact": {
             "website": " https://www.instagram.com/scitech_engclub?igsh=MWY4azZ5Y25hc3RzNg==",
             "email": "rodrigo.barrera@stisd.net",
+            "instagram": "@scitech_engineeringclub",
             "address": "900 Med High Dr, Mercedes, TX 78570"
         }
     },
@@ -66,6 +70,7 @@ const resources = [
         "contact": {
             "website": " https://www.instagram.com/scitechastronomy?igsh=MXY2cm05Y3FxbTR0Yg==",
             "email": "mario.guzman@stisd.net",
+            "instagram": "@scitechastronomy",
             "address": "900 Med High Dr, Mercedes, TX 78570"
         }
     },
@@ -80,6 +85,7 @@ const resources = [
         "contact": {
             "website": "https://www.instagram.com/sa.environmental.club?igsh=amdxcGg4OGZ0eTBo",
             "email": "andrew.cortez@stisd.net",
+            "instagram": "@sa.environmental.club",
             "address": "900 Med High Dr, Mercedes, TX 78570"
         }
     },
@@ -94,6 +100,7 @@ const resources = [
         "contact": {
             "website": " https://www.instagram.com/scitech.nhs?igsh=ZmkxY2Y5YWNwNWVu",
             "email": "michael.laverde@stisd.net",
+            "instagram": "@scitech.nhs",
             "address": "900 Med High Dr, Mercedes, TX 78570"
         }
     },
@@ -108,6 +115,7 @@ const resources = [
         "contact": {
             "website": " https://www.instagram.com/scienceacademyesports?igsh=MTM2ZG9qdG1xZ2FvMA==",
             "email": "travis.maldonado@stisd.net",
+            "instagram": "@scienceacademyesports",
             "address": "900 Med High Dr, Mercedes, TX 78570"
         }
     },
@@ -305,6 +313,7 @@ const resources = [
         "contact": {
             "website": "https://foodbankrgv.com/",
             "phone": "956-682-8101",
+            "instagram": "@foodbankrgv",
             "address": "2601 Zinnia Ave, McAllen, Texas 78501"
         }
     },
@@ -319,6 +328,7 @@ const resources = [
         "contact": {
             "website": "https://www.volunteersotx.org/",
             "phone": "(956) 686-6331",
+            "instagram": "@unitedwaysouthtexas",
             "address": "113 W. Pecan Blvd., McAllen, TX, United States, Texas"
         }
     },
