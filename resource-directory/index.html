@@ -27,12 +27,17 @@
     </div>
     <div id="top-div">
         <h1 id="resource-directory-title">Resource Directory</h1>
-        <input id="search-bar" type="text" onkeyup="searchBarFilter()" placeholder="Search for resources by name or keyword...">
+        <input id="search-bar" type="text" onkeyup="searchBarFilter()" placeholder="Search resources...">
     </div>
 
     <hr>
     <div id="main-layout">
-        <div id="filter-container"> <!-- JS automatically populates filters --> </div>
+        <div id="filter-container">
+            <h2>Filters</h2>
+            <div id="filter-groups-container">
+                <!-- JS automatically populates filters --> 
+            </div>
+        </div>
         <div id="resource-list-container">
             <ul id="resource-list"> <!-- JS automatically populates resources --> </ul>
         </div>

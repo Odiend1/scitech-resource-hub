@@ -235,7 +235,7 @@ function generateFilters(){
         }
     }
 
-    let filterContainer = document.getElementById("filter-container");
+    let filterContainer = document.getElementById("filter-groups-container");
     for(let i = 0; i < tags.length; i++){
         let filterGroupDiv;
         let filterOptionsDiv;
@@ -287,3 +287,29 @@ if(window.location.href.split("?filters=").length > 0){
 }
 
 applyFilters();
+
+let filterGroupsContainer = document.getElementById("filter-groups-container");
+
+document.getElementById("filter-container").addEventListener("click", function(e){
+    if(window.innerWidth <= 750){
+        filterGroupsContainer.hidden = !filterGroupsContainer.hidden;
+    }
+});
+
+window.addEventListener("resize", function(e){
+    if(window.innerWidth > 750){
+        if(filterGroupsContainer.hidden) filterGroupsContainer.hidden = false;
+    }
+    else{
+        if(!filterGroupsContainer.hidden) filterGroupsContainer.hidden = true;
+    }
+});
+
+document.addEventListener("DOMContentLoaded", function(e){
+    if(window.innerWidth > 750){
+        if(filterGroupsContainer.hidden) filterGroupsContainer.hidden = false;
+    }
+    else{
+        if(!filterGroupsContainer.hidden) filterGroupsContainer.hidden = true;
+    }
+});

@@ -48,6 +48,8 @@ h4, h5, h6, p, label, a{
     padding-top: 50px;
     padding-bottom: 8px;
     background-color: var(--background-color2);
+    display: flex;
+    flex-direction: column;
 }
 
 #resource-directory-title{
@@ -55,7 +57,7 @@ h4, h5, h6, p, label, a{
 }
 
 #search-bar{
-    width: 80%;
+    max-width: 80%;
     height: 30px;
     font-size: 1.18em;
     border-radius: 35px;
@@ -166,9 +168,9 @@ h4, h5, h6, p, label, a{
     min-height: 100%;
     padding-right: 1%;
     border-right: 1px solid #ccc;
-    margin-top: 8px;
     flex: 0 0 14%;
     padding: 16px;
+    background-color: #fafafa;
 }
 
 .filter-group-title{
@@ -183,6 +185,27 @@ h4, h5, h6, p, label, a{
     overflow: hidden;
     text-overflow: ellipses;
 }
+
+#filter-container h2{
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 750px){
+    #main-layout{
+        flex-direction: column;
+    }
+    #filter-container{
+        border: none;
+        flex-grow: 1;
+        min-width: calc(100vw - 32px);
+        border-bottom: 1px solid #ccc;
+    }
+    #resource-list-container{
+        flex-grow: 1;
+        min-width: calc(100vw - 32px);
+    }
+}
+
 
 hr{
     margin: 0;
