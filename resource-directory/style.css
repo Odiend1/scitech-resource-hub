@@ -76,7 +76,7 @@ h4, h5, h6, p, label, a{
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(./assets/photos/science-academy.jpg);
+    background-image: url(./assets/photos/science-academy.webp);
     background-size: cover;
     filter: brightness(30%);
     z-index: -1;
