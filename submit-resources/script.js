@@ -53,12 +53,11 @@ let resourceContactElements = document.getElementsByClassName("resource-contact"
 function addContactRow(){
     let contactInputRow = document.createElement('div');
     contactInputRow.className = 'contact-input-row';
-    let contactTypeInput = document.createElement('input');
+    let contactTypeInput = document.createElement('select');
     contactTypeInput.className = 'resource-contact-type';
-    contactTypeInput.type = 'text';
     contactTypeInput.name = 'contact-type[]';
     contactTypeInput.placeholder = 'Method...';
-    contactTypeInput.setAttribute('list', 'contact-datalist');
+    contactTypeInput.innerHTML = document.getElementById('contact-datalist').innerHTML;
     let contactInput = document.createElement('input');
     contactInput.className = 'resource-contact';
     contactInput.type = 'text';
@@ -72,23 +71,24 @@ function addContactRow(){
         contactInputRow.remove();
     });
 
-    resourceContactTypeElements = document.getElementsByClassName("resource-contact-type")
-    resourceContactElements = document.getElementsByClassName("resource-contact")
-    for(let i = 0; i < resourceContactElements.length; i++){
-        resourceContactElements[i].addEventListener("change", function(e){
-            if(resourceContactElements[i].value.trim().length > 0){
-                resourceContactTypeElements[i].required = true;
-            }
-            else{
-                resourceContactTypeElements[i].required = false;
-            }
-        })
-    }
-
     contactInputRow.appendChild(contactTypeInput);
     contactInputRow.appendChild(contactInput);
     contactInputRow.appendChild(removeContactButton);
     document.getElementById("contact-input-container").appendChild(contactInputRow);
+
+    resourceContactTypeElements = document.getElementsByClassName("resource-contact-type")
+    resourceContactElements = document.getElementsByClassName("resource-contact")
+    for(let i = 0; i < resourceContactElements.length; i++){
+        if(resourceContactTypeElements[i].value.trim().length == 0) resourceContactElements[i].style.display = "none";
+        resourceContactTypeElements[i].addEventListener("input", function(e){
+            if(resourceContactTypeElements[i].value.trim().length > 0){
+                resourceContactElements[i].style.display = "";
+            }
+            else{
+                resourceContactElements[i].style.display = "none";
+            }
+        })
+    }
 }
 
 addContactRow();
@@ -100,6 +100,22 @@ addContactButton.addEventListener('click', function(event){
         return;
     }
     addContactRow();
+});
+
+document.addEventListener("DOMContentLoaded", function(e){
+    resourceContactTypeElements = document.getElementsByClassName("resource-contact-type")
+    resourceContactElements = document.getElementsByClassName("resource-contact")
+    for(let i = 0; i < resourceContactElements.length; i++){
+        if(resourceContactTypeElements[i].value.trim().length == 0) resourceContactElements[i].style.display = "none";
+        resourceContactTypeElements[i].addEventListener("input", function(e){
+            if(resourceContactTypeElements[i].value.trim().length > 0){
+                resourceContactElements[i].style.display = "";
+            }
+            else{
+                resourceContactElements[i].style.display = "none";
+            }
+        })
+    }
 });
 
 const resourceForm = document.getElementById("resource-form");

@@ -50,12 +50,17 @@
                 <label for="contact[]">Contact Information <button id="add-contact" class="add-row" type="button">+</button></label><br>
                 <div class="contact-input-row">
                     <!-- <input type="text" list="contact-datalist" class="resource-contact-type" name="contact-type[]" placeholder="Method..."> -->
-                    <input class="resource-contact-type" type="text" name="contact-type[]" placeholder="Method..." list="contact-datalist" hidden>
+                    <select class="resource-contact-type" name="contact-type[]" placeholder="Method..." list="contact-datalist" hidden>
+                        <option value="Email" selected>Email</option>
+                        <option value="Phone">Phone</option>
+                        <option value="Address">Address</option>
+                        <option value="Instagram">Instagram</option>
+                    </select>
                     <datalist id="contact-datalist">
                         <option value="Email" selected>Email</option>
                         <option value="Phone">Phone</option>
-                        <option value="Address"></option>
-                        <option value="Instagram"></option>
+                        <option value="Address">Address</option>
+                        <option value="Instagram">Instagram</option>
                     </datalist>
                     <input class="resource-contact" type="text" name="contact[]" placeholder="Contact..." hidden>
                     <button class="hidden-remove-row remove-row" type="button" hidden>-</button>

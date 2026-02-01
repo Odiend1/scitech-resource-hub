@@ -74,7 +74,7 @@ input[type="text"]:not(.resource-tags):not(.resource-contact):not(.resource-cont
     width: 100%;
 }
 
-input[type="text"]:not(.resource-tags), input[type="url"]{
+input[type="text"]:not(.resource-tags), input[type="url"], select{
     height: 50px;
     font-size: 20px;
     border-radius: 10px;
@@ -139,8 +139,10 @@ input[type="submit"]:hover{
     margin-left: 8px;
 }
 
-.tag-input-row{
+.tag-input-row, .contact-input-row{
     text-align: center;
+    display: flex;
+    align-items: center;
 }
 
 .hidden-remove-row{
@@ -152,11 +154,13 @@ input[type="submit"]:hover{
     width: 44%;
     height: 50px;
     margin-left: 2%;
+    flex-grow: 1;
 }
 
 .resource-contact-type{
     width: 44%;
     height: 50px;
+    flex-grow: 1;
 }
 
 #clear-resources{
