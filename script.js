@@ -2,18 +2,6 @@ import { resources } from "./resource-directory/resources.js";
 
 let resourceItems = document.getElementsByClassName("resource-item");
 
-document.getElementById("expand-navbar").onclick = function(e){
-    let navbarLinks = document.getElementsByClassName("navbar-link");
-    for(let i = 0; i < navbarLinks.length; i++){
-        if(!navbarLinks[i].classList.contains("hidden-navbar-link")){
-            navbarLinks[i].classList.add("hidden-navbar-link")
-        }
-        else{
-            navbarLinks[i].classList.remove("hidden-navbar-link");
-        }
-    }
-}
-
 function capitalizeTitle(string){
     const splitString = string.split(" ");
     for(let i = 0; i < splitString.length; i++){

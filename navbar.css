@@ -1,0 +1,100 @@
+:root {
+    --background-color: rgb(255, 255, 255);
+    --background-color2: rgb(237, 255, 231);
+    --background-color3: rgb(28, 207, 111);
+    --title-color: rgb(255, 255, 255);
+    --text-color: rgb(0, 0, 0);
+    --accent-color: #06a556;
+    --accent-color-translucent: #20b92040;
+    --glow-color: #20e086c7;
+    --highlight-color: #cfe4da;
+    --frosted-glass-color: rgba(255, 255, 255, 1);
+    --background: linear-gradient(45deg, var(--background-color), white);
+    --title-font: "Space Grotesk", sans-serif;
+    --text-font: "Varela Round", sans-serif;
+}
+
+#navbar{
+    z-index: 3;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--background-color);
+    border-bottom: 4px solid var(--accent-color);
+    display: flex;
+    height: 50px;
+}
+
+#navbar-links{
+    background-color: var(--background-color);
+    border-bottom: 4px solid white;
+    z-index: 4;
+}
+
+
+#navbar a{
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 15px 20px;
+    float: right;
+    font-family: "Varela Round", sans-serif;
+    transform: translateY(-1px);
+    z-index: 2;
+}
+
+#navbar img{
+    height: 45px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 650px){
+    #navbar-links{
+        display: flex;
+        justify-content: flex-end;
+        flex-grow: 1;
+    }
+
+    #expand-navbar{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 650px){
+    #navbar-links{
+        grid-auto-flow: row;
+        justify-items: end;
+        margin-left: auto;
+        display: grid;
+    }
+
+    #navbar a{
+        background-color: var(--background-color);
+        width: 100%;
+        border-left: 4px solid var(--accent-color);
+        text-align: right;
+    }
+
+    #navbar .last-navbar-link{
+        border-bottom: 4px solid var(--accent-color);
+    }
+
+    #expand-navbar{
+        background-color: transparent;
+        width: 65px;
+        height: 50px;
+        background-image: url('./assets/icons/menu-icon.webp');
+        background-size: contain;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        border: none;
+        border-radius: 0;
+        margin-left: auto;
+        padding-right: 15px;
+    }
+
+    .hidden-navbar-link{
+        display: none;
+    }
+}

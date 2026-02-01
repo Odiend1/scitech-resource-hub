@@ -12,13 +12,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&family=Varela+Round&display=swap" rel="stylesheet">
     <title>Resource Directory | Science Academy Resource Hub</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../navbar.css">
 </head>
 <body>
     <div id="navbar">
-        <a class="navbar-link" href="../submit-resources/">Submit Resources</a>
-        <a class="navbar-link" href="?">Resource Directory</a>
-        <a class="navbar-link" href="../about/">About</a>
-        <a class="navbar-link" href="../">Home</a>
+        <img src="../assets/icons/logo-icon2.webp" onclick="window.location.href='../'">
+        <div id="navbar-links"> 
+            <button id="expand-navbar"></button>
+            <a class="navbar-link hidden-navbar-link" href="../">Home</a>
+            <a class="navbar-link hidden-navbar-link" href="../about">About</a>
+            <a class="navbar-link hidden-navbar-link" href="./">Resource Directory</a>
+            <a class="navbar-link hidden-navbar-link last-navbar-link" href="../submit-resources/">Submit Resources</a>
+        </div>
     </div>
     <div id="top-div">
         <h1 id="resource-directory-title">Resource Directory</h1>
@@ -61,6 +66,7 @@
 
     <script src="script.js" type="module"></script>
     <script src="resources.js" type="module"></script>
+    <script src="../navbar.js" type="module"></script>
     <script>
         let resourceItems = document.getElementsByClassName("resource-item");
 

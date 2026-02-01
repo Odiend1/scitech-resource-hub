@@ -29,25 +29,6 @@ h4, h5, h6, p, label, a{
     color: var(--accent-color);
 }
 
-#navbar{
-    z-index: 3;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: var(--background-color);
-    border-bottom: 8px solid var(--accent-color);
-    z-index: 2;
-}
-
-#navbar a{
-    text-decoration: none;
-    color: var(--text-color);
-    padding: 15px 20px;
-    float: right;
-    font-family: "Varela Round", sans-serif;
-}
-
 #about-container{
     background-color: white;
     padding: 100px 20px;
