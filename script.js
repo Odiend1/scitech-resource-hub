@@ -112,7 +112,7 @@ function populateResources(random=false){
         resourceList.appendChild(resourceItem);
 
         numResourcesFeatured++;
-        if((numResourcesFeatured + 1) * 282 + (numResourcesFeatured) * 0.03 * window.innerWidth > window.innerWidth && numResourcesFeatured > 1) break;
+        if(((numResourcesFeatured > 3 && window.innerWidth > 650) || (numResourcesFeatured >= 3 && window.innerWidth <= 650)) && ((numResourcesFeatured + 1) * 282 + (numResourcesFeatured) * 0.03 * window.innerWidth > window.innerWidth && numResourcesFeatured > 1)) break;
     }
 }
 
@@ -149,7 +149,7 @@ function tagColorFromString(str){
 
 populateResources();
 window.addEventListener("resize", function(e){
-    if((numResourcesFeatured) * 282 + (numResourcesFeatured - 1) * 0.03 * window.innerWidth > window.innerWidth || (numResourcesFeatured + 1) * 282 + (numResourcesFeatured) * 0.03 * window.innerWidth < window.innerWidth){
+    if((numResourcesFeatured > 2) && ((numResourcesFeatured) * 282 + (numResourcesFeatured - 1) * 0.03 * window.innerWidth > window.innerWidth || (numResourcesFeatured + 1) * 282 + (numResourcesFeatured) * 0.03 * window.innerWidth < window.innerWidth)){
         console.log("repopulating")
         document.getElementById("resource-list").innerHTML = "";
         populateResources();

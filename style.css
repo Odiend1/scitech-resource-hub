@@ -167,7 +167,20 @@ button{
     gap: 32px;
     justify-content: center;
     margin: 0;
+    padding: 0;
     list-style: none;
+}
+
+@media screen and (max-width: 1250px){
+    #resource-list{
+        grid-template-columns: repeat(2, 282px);
+    }
+}
+
+@media screen and (max-width: 650px){
+    #resource-list{
+        grid-template-columns: repeat(1, 282px);
+    }
 }
 
 #resource-list li{
