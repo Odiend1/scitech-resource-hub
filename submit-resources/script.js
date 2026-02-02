@@ -171,7 +171,7 @@ resourceForm.addEventListener("submit", function(e){
     let submittedResources = JSON.parse(localStorage.getItem("submittedResources")) || [];
     submittedResources.push(formObject);
     localStorage.setItem("submittedResources", JSON.stringify(submittedResources));
-    alert("Resource submitted successfully!");
+    alert("Resource submitted successfully! Your request is being processed.");
     resourceForm.reset();
 })
 
@@ -187,7 +187,7 @@ for(let i = 0; i < resourceContactElements.length; i++){
 }
 
 document.getElementById("clear-resources").addEventListener("click", function(){
-    let confirmation = confirm("Are you sure you want to clear all submitted resources? This action cannot be undone.");
+    let confirmation = confirm("Are you sure you want to withdraw all resource submissions? This action cannot be undone.");
     if(confirmation){
         localStorage.removeItem("submittedResources");
         alert("Submitted resources cleared.");
