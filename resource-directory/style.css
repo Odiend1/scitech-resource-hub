@@ -47,7 +47,7 @@ h4, h5, h6, p, label, a{
 #top-div{
     padding-top: 50px;
     padding-bottom: 8px;
-    background-color: var(--background-color2);
+    background-color: #e0f7ec;
     display: flex;
     flex-direction: column;
 }
