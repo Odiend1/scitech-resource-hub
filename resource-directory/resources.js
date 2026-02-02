@@ -31,7 +31,7 @@ const resources = [
     },
     {
         "name": "Business Professionals of America",
-        "description": "BPA (Also known as Business Professionals of America) is a major club here at Science Academy.Here students are able to compete in business related competitions/events, ranging from interview skills & presentations, to finance & marketing management. Students can also choose whether they want to participate in team events, and/or individual events as well. Students competed from the regional level and tried to advance to the state and national levels, earning them a fun trip full of memories!\n",
+        "description": "BPA (Also known as Business Professionals of America) is a major club here at Science Academy. Here students are able to compete in business related competitions/events, ranging from interview skills & presentations, to finance & marketing management. Students can also choose whether they want to participate in team events, and/or individual events as well. Students competed from the regional level and advance to the state and national levels, earning them a fun trip full of memories!\n",
         "tags": {
             "category": ["Club Organizations", "After School"],
             "audience": ["Students"]
@@ -61,7 +61,7 @@ const resources = [
     },
     {
         "name": "Astronomy Club",
-        "description": "Do you want to learn more about the stars, space, and the universe? Well, the Astronomy Club is perfect for you. Here at the Astronomy club, we have students explore the elements of space and what makes up our universe. We do different activities as well in order to ensure that students are able to understand what makes up our universe. We also host starwatch parties where students can look at the stars while being with friends.",
+        "description": "Do you want to learn more about the stars, space, and the universe? Well, the astronomy club is perfect for you. Here at the astronomy club, we have students explore the elements of space and what makes up our universe. We do different activities as well in order to ensure that students are able to understand what makes up our universe. We also host starwatch parties where students can look at the stars while being with friends.",
         "tags": {
             "category": ["Club Organizations", "STEM", "After School"],
             "audience": ["Students"]
@@ -230,6 +230,7 @@ const resources = [
         },
         "featured": false,
         "contact": {
+            "website": "https://www.samhsa.gov/mental-health/988",
             "address": "900 Med High Dr, Mercedes, TX 78570"
         }
     },
