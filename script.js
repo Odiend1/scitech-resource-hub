@@ -148,9 +148,11 @@ function tagColorFromString(str){
 }
 
 populateResources();
+
+let prevWidth = window.innerWidth;
 window.addEventListener("resize", function(e){
-    if((numResourcesFeatured > 2) && ((numResourcesFeatured) * 282 + (numResourcesFeatured - 1) * 0.03 * window.innerWidth > window.innerWidth || (numResourcesFeatured + 1) * 282 + (numResourcesFeatured) * 0.03 * window.innerWidth < window.innerWidth)){
-        console.log("repopulating")
+    if((this.window.innerWidth != prevWidth) && (numResourcesFeatured > 3) && ((numResourcesFeatured) * 282 + (numResourcesFeatured - 1) * 0.03 * window.innerWidth > window.innerWidth || (numResourcesFeatured + 1) * 282 + (numResourcesFeatured) * 0.03 * window.innerWidth < window.innerWidth)){
+        prevWidth = this.window.innerWidth;
         document.getElementById("resource-list").innerHTML = "";
         populateResources();
     }
