@@ -270,7 +270,7 @@ const resources = [
         }
     },
     {
-        "name": "SAT/ACT Prep ",
+        "name": "SAT & ACT Prep ",
         "description": "SAT and ACT prep sessions will support students as they prepare for college entrance exams. These sessions provide practice strategies, test-taking tips, and an overview of exam formats to help students build confidence and improve performance.",
         "tags": {
             "category": ["College Readiness", "After School"],
@@ -283,7 +283,7 @@ const resources = [
     },
     {
         "name": "College Readiness Sessions",
-        "description": "Guidance counselors help seniors with Common App, FAFSA, and essay writing through a three-day After School college readiness workshop.",
+        "description": "Guidance counselors help seniors with Common App, FAFSA, and essay writing through a summer college readiness workshop.",
         "tags": {
             "category": ["College Readiness", "After School", "Weekends"],
             "audience": ["Students", "Parents"]
@@ -336,8 +336,8 @@ const resources = [
         "name": "Peer Mentoring",
         "description": "At Science Academy we value connections. Through our peer mentoring services students can help each other prepare for exams, solve unanswered assignment problems, or even needs practice for a competition. The Science Academy Student Body is here to help! Students can ask their teachers or supervisors about wanting additional practice, and teachers will be able to find a student who will be willing to teach. The student who is volunteering will also receive community hours allowing for students to benefit from this opportunity as well.",
         "tags": {
-            "category": ["College Readiness", "Volunteering"],
-            "audience": ["Students", "Faculty"]
+            "category": ["College Readiness", "Volunteering","After School"],
+            "audience": ["Students"]
         },
         "featured": false,
         "contact": {
@@ -346,7 +346,7 @@ const resources = [
     },
     {
         "name": "Study Sessions",
-        "description": "Struggling in AP Classes? At Science Academy, our teachers prioritize students' understanding of their content, especially the AP teachers in AP subjects. During the 2nd semester of the school year, AP teachers will host special events After School and on the weekend where students can attend to gain in-depth knowledge and practice for their upcoming AP exams. \n",
+        "description": "Struggling in AP Classes? At Science Academy, our teachers prioritize students' understanding of class content, especially the AP teachers in AP subjects. During the 2nd semester of the school year, AP teachers will host special events after school and on the weekend where students can attend to gain in-depth knowledge and practice for their upcoming AP exams. \n",
         "tags": {
             "category": ["College Readiness", "After School", "Weekends"],
             "audience": ["Students", "Faculty"]
