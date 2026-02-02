@@ -225,6 +225,7 @@ const resources = [
         "name": "Crisis Hotline",
         "description": "Our school recognizes the importance of student safety and emotional well-being. In addition to providing mental health services and wellness workshops, every student is given direct access to the Crisis Hotline through the phone number printed on their school ID. This ensures that students always have immediate access to confidential support if they are experiencing emotional distress or need someone to talk to.",
         "tags": {
+            "website": "https://www.samhsa.gov/mental-health/988",
             "category": ["Health & Wellness"],
             "audience": ["Students", "Parents", "Faculty"]
         },
