@@ -35,21 +35,21 @@ function imageExists(url) {
   });
 }
 
-imageExists(`../../assets/resource-images/${resourceName.replaceAll(" ", "-")}.jpg`).then(function(jpgIsValid){
+imageExists(`../../assets/resource-images/${resourceName.toLowerCase().replaceAll(" ", "-")}.jpg`).then(function(jpgIsValid){
     if (jpgIsValid) {
-        document.getElementById("resource-img").src = `../../assets/resource-images/${resourceName.replaceAll(" ", "-")}.jpg`;
+        document.getElementById("resource-img").src = `../../assets/resource-images/${resourceName.toLowerCase().replaceAll(" ", "-")}.jpg`;
     } else {
-        imageExists(`../../assets/resource-images/${resourceName.replaceAll(" ", "-")}.webp`).then(function(webpIsValid){
+        imageExists(`../../assets/resource-images/${resourceName.toLowerCase().replaceAll(" ", "-")}.webp`).then(function(webpIsValid){
             if (webpIsValid) {
-                document.getElementById("resource-img").src = `../../assets/resource-images/${resourceName.replaceAll(" ", "-")}.webp`;
+                document.getElementById("resource-img").src = `../../assets/resource-images/${resourceName.toLowerCase().replaceAll(" ", "-")}.webp`;
             } else {
-                imageExists(`../../assets/resource-images/${resourceName.replaceAll(" ", "-")}.jpeg`).then(function(jpegIsValid){
+                imageExists(`../../assets/resource-images/${resourceName.toLowerCase().replaceAll(" ", "-")}.jpeg`).then(function(jpegIsValid){
                     if (jpegIsValid) {
-                        document.getElementById("resource-img").src = `../../assets/resource-images/${resourceName.replaceAll(" ", "-")}.jpeg`;
+                        document.getElementById("resource-img").src = `../../assets/resource-images/${resourceName.toLowerCase().replaceAll(" ", "-")}.jpeg`;
                     } else {
-                        imageExists(`../../assets/resource-images/${resourceName.replaceAll(" ", "-")}.png`).then(function(pngIsValid){
+                        imageExists(`../../assets/resource-images/${resourceName.toLowerCase().replaceAll(" ", "-")}.png`).then(function(pngIsValid){
                             if (pngIsValid) {
-                                document.getElementById("resource-img").src = `../../assets/resource-images/${resourceName.replaceAll(" ", "-")}.png`;
+                                document.getElementById("resource-img").src = `../../assets/resource-images/${resourceName.toLowerCase().replaceAll(" ", "-")}.png`;
                             } else {
                                 document.getElementById("resource-img").src = '../../assets/resource-images/default-resource-image.webp';
                             }
