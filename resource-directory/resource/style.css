@@ -58,6 +58,7 @@ h4, h5, h5, p, a{
     flex-wrap: wrap;
     justify-content: space-around;
     text-align: center;
+    align-items: center;
 }
 
 #resource-img{
@@ -65,8 +66,8 @@ h4, h5, h5, p, a{
     height: auto;
     border-radius: 20px;
     border: 1px solid #ccc;
-    object-fit: cover;
-    /* margin: 1% 10% 2% 0; */
+    /* object-fit: contain; */
+    display: block;
 }
 
 #resource-text{
