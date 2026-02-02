@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../navbar.css">
+    <title>About</title>
+</head>
+<body>
+<div id="navbar">
+    <img src="../assets/icons/logo-icon2.webp" onclick="window.location.href='../'">
+    <div id="navbar-links"> 
+        <button id="expand-navbar"></button>
+        <a class="navbar-link hidden-navbar-link" href="../">Home</a>
+        <a class="navbar-link hidden-navbar-link" href="../about/">About</a>
+        <a class="navbar-link hidden-navbar-link" href="../resource-directory/">Resource Directory</a>
+        <a class="navbar-link hidden-navbar-link last-navbar-link" href="../submit-resources/">Submit Resources</a>
+    </div>
+</div>
+
+<div id="center-div">
+    <h1 id="title">References</h1>
+    <div id="pdf-link-div">
+        <a class="main-link" href="../assets/documents/worklog.pdf" target="_blank">Work Log</a>&nbsp;<a class="main-link">Copyright Checklist</a>
+    </div>
+    <div id="pdf-display-div">
+        <object data="../assets/documents/worklog.pdf" type="application/pdf" width="800px" height="400px"></object>
+        <object data="../assets/documents/copyright-checklist.pdf" type="application/pdf" width="800px" height="400px"></object>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>SciTech Dragon Community</h2>
+                <a href="../"><img src="../assets/icons/logo-icon.webp"></a>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul class="footer-links-list">
+                <li><a href="./">About Scitech Community</a></li>
+                <li><a href="../#featured">Featured Resources</a></li>
+                <li><a href="../resource-directory/">Browse Resources</a></li>
+                <li><a href="../submit-resources/">Submit a Resource</a></li>
+                </ul>
+            </div>
+            <div class="footer-disclaimer">
+                <h3>Disclaimer</h3>
+                <p>This is a community resource hub and is not the official school website. For official school announcements, policies, and schedules, please visit the district website.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+        <p>© 2026 scitechcommunity.com. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script type="module" src="script.js"></script>
+<script type="module" src="../navbar.js"></script>
+</body>
+</html>

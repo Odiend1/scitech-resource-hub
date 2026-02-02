@@ -1,0 +1,121 @@
+:root {
+    --background-color: rgb(255, 255, 255);
+    --background-color2: rgb(237, 255, 231);
+    --background-color3: rgb(28, 207, 111);
+    --title-color: rgb(255, 255, 255);
+    --text-color: rgb(0, 0, 0);
+    --accent-color: #06a556;
+    --accent-color-translucent: #20b92040;
+    --glow-color: #20e086c7;
+    --highlight-color: #cfe4da;
+    --frosted-glass-color: rgba(255, 255, 255, 1);
+    --background: linear-gradient(45deg, var(--background-color), white);
+    --title-font: "Space Grotesk", sans-serif;
+    --text-font: "Varela Round", sans-serif;
+}
+
+
+html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3{
+    font-family: var(--title-font);
+}
+
+h4, h5, h6, p, label, a{
+    font-family: var(--text-font);
+}
+
+#center-div{
+    margin-top: 100px;
+    width: 100%;
+    text-align: center;
+}
+
+#pdf-link-div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.main-link{
+    margin: 0 10px;
+    font-size: 1.5em;
+}
+
+#pdf-display-div{
+    margin-top: 50px;
+}
+
+footer{
+    background-color: #f7f7f7;
+}
+
+.footer-container{
+    max-width: 1200px;
+    margin: 30px auto 0;
+    padding: 10px 5% 30px;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+.footer-logo{
+    flex: 1;
+    min-width: 220px;
+}
+
+.footer-logo img{
+    width: 100px;
+}
+
+.footer-links{
+    flex: 1;
+    min-width: 150px;
+}
+
+.footer-disclaimer{
+    flex: 2;
+    min-width: 80px;
+}
+
+.footer-links-list{
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-links-list a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.footer-links-list a:hover {
+    color: var(--accent-color);
+}
+
+.footer-bottom {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+    text-align: center;
+    font-size: 0.9em;
+    color: #555;
+}
+
+@media screen and (max-width: 750px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+}
