@@ -7,7 +7,7 @@
     --accent-color: rgb(32, 185, 32);
     --accent-color-translucent: rgba(32, 185, 32, 0.25);
     --glow-color: rgb(0, 255, 0);
-    --highlight-color: rgb(219, 255, 204);
+    --highlight-color: #dbffcc;
     --frosted-glass-color: rgba(255, 255, 255, 0.15);
     --background: linear-gradient(45deg, var(--background-color), white);
     --title-font: "Space Grotesk", sans-serif;
@@ -59,7 +59,7 @@ form{
     padding: 50px 10px;
     border: 1px solid #ccc;
     border-radius: 50px;
-    background-color: var(--background-color2);
+    background-color: #e0f7ec;
 }
 
 #form-container{
