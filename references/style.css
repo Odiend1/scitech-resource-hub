@@ -46,8 +46,50 @@ h4, h5, h6, p, label, a{
     font-size: 1.5em;
 }
 
+#image-link-container{
+    margin-top: 50px;
+}
+
+.image-link-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 15px;
+}
+
+.image-link-table td {
+    padding: 12px 20px;
+    vertical-align: top;
+    text-align: left;
+    background-color: #fafafa;
+    border-radius: 12px;
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+
+.image-link-table a {
+    word-break: break-all;
+}
+
+@media (max-width: 700px) {
+    .image-link-table tr {
+        display: block;
+        margin-bottom: 12px;
+    }
+
+    .image-link-table td {
+        display: block;
+        width: 100%;
+        padding: 6px 0;
+    }
+}
+
+
 #pdf-display-div{
     margin-top: 50px;
+}
+
+#pdf-display-div object{
+    max-width: 100%;
 }
 
 footer{
