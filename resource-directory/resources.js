@@ -31,7 +31,7 @@ const resources = [
     },
     {
         "name": "Business Professionals of America",
-        "description": "BPA (Also known as Business Professionals of America) is a major club here at Science Academy. Here students are able to compete in business related competitions/events, ranging from interview skills & presentations, to finance & marketing management. Students can also choose whether they want to participate in team events, and/or individual events as well. Students competed from the regional level and advance to the state and national levels, earning them a fun trip full of memories!\n",
+        "description": "BPA (Also known as Business Professionals of America) is a major club here at Science Academy. Here students are able to compete in business related competitions/events, ranging from interview skills & presentations, to finance & marketing management. Students can also choose whether they want to participate in team events, and/or individual events as well. Students compete from a regional level and advance to the state and national levels, earning them a fun trip full of memories!\n",
         "tags": {
             "category": ["Club Organizations", "After School"],
             "audience": ["Students"]
@@ -145,7 +145,7 @@ const resources = [
     },
     {
         "name": "Engineering Design & Development (EDD)",
-        "description": " EDD (Also known as Engineering Design and Development) is an old Science Academy tradition that makes up the core of our school. EDD is an engineering class that seniors take during their senior year. The students form teams and create, test, and prototype a solution to a problem and/or modify an existing solution. The projects that the students create will be showcased on EDD day (which is usually around the spring), in front of underclassmen. However, there is a twist! The solutions created are being judged by Science Academy Alumni, Business Owners, and Professors from colleges such as UTRGV, Texas  A&M, and UT Austin. The 3 teams with the most liked project will advance to the final round in which they will present their idea to the entire student body in order to win a scholarship. \n\n",
+        "description": " Engineering Desing and Development is an old Science Academy tradition that makes up the core of our school. EDD is an engineering class that seniors take during their senior year. Students form teams to create, test, and prototype a solution to a problem and/or modify an existing solution. The projects that the students create will be showcased on EDD day (usually around spring), in front of underclassmen. However, there is a twist! The solutions created are being judged by Science Academy Alumni, Business Owners, and Professors from colleges such as UTRGV, Texas  A&M, and UT Austin. The top three teams will advance to the final round in which they will present their idea to the entire student body in order to win a scholarship.",
         "tags": {
             "category": ["Events", "During School", "After School"],
             "audience": ["Students", "Parents"]
@@ -182,7 +182,7 @@ const resources = [
     },
     {
         "name": "Mental Health Services & Wellness Workshops",
-        "description": "We know how stressed out our students can get, and we also know the effects of leaving mental health unchecked, so in order to combat this, our school offers mental health services to the entire student body. From counseling, to fun workshops (like chalk decorating & handing out stickers) the mental health services provide a safe place for students to calm down, help their mental health, and have fun!\n",
+        "description": "We know how stressed our students can get, and we also know the effects of leaving mental health unchecked, so in order to combat this, our school offers mental health services to the entire student body. From counseling, to fun workshops (like chalk decorating & handing out stickers) the mental health services provide a safe place for students to calm down, help their mental health, and have fun!",
         "tags": {
             "category": ["Health & Wellness", "Counseling", "After School"],
             "audience": ["Students", "Parents"]
@@ -320,7 +320,7 @@ const resources = [
     },
     {
         "name": "Community Services",
-        "description": "At Science Academy we urge students to have 70+ hours before they graduate.Community service opportunities provide students with meaningful ways to give back to their school and local community through volunteering. These opportunities allow students to support local organizations, participate in service projects, and develop leadership and teamwork skills.(Partnered with the National Honors Society club). ",
+        "description": "At Science Academy we urge students to have 70+ hours before they graduate. Community service opportunities provide students with meaningful ways to give back to their school and local community through volunteering. These opportunities allow students to support local organizations, participate in service projects, and develop leadership and teamwork skills.(Partnered with the National Honors Society club). ",
         "tags": {
             "category": ["Public Facilities", "Volunteering"],
             "audience": ["Students", "Parents"]
@@ -335,7 +335,7 @@ const resources = [
     },
     {
         "name": "Peer Mentoring",
-        "description": "At Science Academy we value connections. Through our peer mentoring services students can help each other prepare for exams, solve unanswered assignment problems, or even needs practice for a competition. The Science Academy Student Body is here to help! Students can ask their teachers or supervisors about wanting additional practice, and teachers will be able to find a student who will be willing to teach. The student who is volunteering will also receive community hours allowing for students to benefit from this opportunity as well.",
+        "description": "At Science Academy we value connections. Through our peer mentoring services students can help each other prepare for exams, solve unanswered assignment problems, or even needs practice for a competition. The Science Academy Student Body is here to help! Students can ask their teachers or supervisors about wanting additional practice, and teachers will be able to find a student who will be willing to teach. Students who volunteer will also receive community hours allowing them to benefit from this opportunity as well.",
         "tags": {
             "category": ["College Readiness", "Volunteering","After School"],
             "audience": ["Students"]
