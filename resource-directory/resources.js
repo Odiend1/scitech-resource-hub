@@ -270,7 +270,7 @@ const resources = [
         }
     },
     {
-        "name": "SAT & ACT Prep ",
+        "name": "SAT & ACT Prep",
         "description": "SAT and ACT prep sessions will support students as they prepare for college entrance exams. These sessions provide practice strategies, test-taking tips, and an overview of exam formats to help students build confidence and improve performance.",
         "tags": {
             "category": ["College Readiness", "After School"],
